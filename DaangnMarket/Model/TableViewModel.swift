@@ -15,7 +15,7 @@ class UserModel {
         storage = [
             "에이든": User(nickName: "에이든", address: "청덕동", mannerScore: 43.7),
             "당근마": User(nickName: "당근마", address: "마북동", mannerScore: 39.1),
-            "비움": User(nickName: "비움", address: "동백동", mannerScore: 64.0),
+            "비움": User(nickName: "비움", address: "동백동", mannerScore: 36.7),
             "노구트": User(nickName: "노구트", address: "마북동", mannerScore: 41.2),
             "인기제품": User(nickName: "인기제품", address: "중동", mannerScore: 42.0)
         ]
@@ -71,4 +71,7 @@ class SalesPostModel {
 
 
 // MARK: - 동네생활글 Model
+
+
+
 

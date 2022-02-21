@@ -17,6 +17,21 @@ class ViewController: MainViewController {
     
     
     
+    // MARK: - View 전환 (상품 정보 페이지로)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        guard let salesVC = storyboard?.instantiateViewController(withIdentifier: "salesPostView") as? SalesPostViewController else {
+            return
+        }
+        salesVC.receivedData = tableViewModel.returnPostInfo(indexPath.row)
+        
+        self.navigationController?.pushViewController(salesVC, animated: true)
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,6 +41,12 @@ class ViewController: MainViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SalesPostTableViewCell", bundle: nil), forCellReuseIdentifier: "salesCell")
+        
+        
+//        // 테이블뷰 높이 설정
+        tableView.rowHeight = tableView.frame.width / 2.7
+//        // 테이블뷰 사이즈 예측값을 넣어줄 수 있음
+//        tableView.estimatedRowHeight = 150
     }
 
 
@@ -45,7 +66,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let postData = tableViewModel.returnPostInfo(indexPath.row)
         
+        // cell 선택될 때 회색배경 생기는거 없애기
+        cell.selectionStyle = .none
         
+        // 셀 내용 업데이트
         cell.cellUpdate(postData)
         
         

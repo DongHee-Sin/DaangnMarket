@@ -23,7 +23,7 @@ struct SalesPost {
     var title: String
     var content: String
     var price: Int?
-    var imageString: String?
+    var imageString: String = "기본이미지.jpeg"
     var category: ProductCategory
     var chattingCount: Int = 0
     var interestCount: Int = 0
@@ -51,4 +51,5 @@ enum ProductCategory: String {
 
 
 // MARK: - 동네생활글 카테고리
+
 
