@@ -30,3 +30,16 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+
+
+class MainTableViewCell: UITableViewCell {
+    
+    // MARK: - 숫자 -> 콤마찍어서 문자열 반환
+    func DecimalWon(value: Int) -> String{
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
+            return result
+    }
+}

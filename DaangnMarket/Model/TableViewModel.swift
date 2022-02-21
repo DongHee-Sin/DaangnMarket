@@ -61,6 +61,11 @@ class SalesPostModel {
     func returnPostInfo(_ index: Int) -> SalesPost {
         return storage[index]
     }
+    
+    
+//    func addPost(title: String, content: String, ) {
+//        
+//    }
 }
 
 

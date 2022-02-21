@@ -7,14 +7,13 @@
 
 import UIKit
 
-class SalesPostTableViewCell: UITableViewCell {
+class SalesPostTableViewCell: MainTableViewCell {
     
     // MARK: - UI연결
     @IBOutlet weak var cellImage: UIImageView!
-    
     @IBOutlet weak var cellTitle: UILabel!
-    
-    
+    @IBOutlet weak var cellAddress: UILabel!
+    @IBOutlet weak var cellPrice: UILabel!
     
 
     
@@ -30,4 +29,21 @@ class SalesPostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    func cellUpdate(_ data: SalesPost) {
+        if let image = data.imageString {
+            cellImage.image = UIImage(named: image)
+        }
+        cellTitle.text = data.title
+        cellAddress.text = data.writer.address
+        guard let price = data.price else {
+            cellPrice.text = ""
+            return
+        }
+        if price == 0 {
+            cellPrice.text = "나눔🧡"
+        }else {
+            cellPrice.text = DecimalWon(value: price)
+        }
+    }
 }

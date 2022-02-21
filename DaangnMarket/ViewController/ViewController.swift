@@ -21,6 +21,11 @@ class ViewController: MainViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        
+        // Delegate 지정
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "SalesPostTableViewCell", bundle: nil), forCellReuseIdentifier: "salesCell")
     }
 
 
@@ -38,10 +43,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let postData = tableViewModel.returnPostInfo(indexPath.row)
         
         
+        cell.cellUpdate(postData)
         
-        return UITableViewCell()
+        
+        return cell
     }
     
     

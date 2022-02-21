@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="63.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lu-SP-kUx" userLabel="bell View">
-                                        <rect key="frame" x="371" y="15.5" width="33" height="33"/>
+                                        <rect key="frame" x="375" y="17.5" width="29" height="29"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kKo-Eq-SsK">
-                                                <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="28.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                         </subviews>
@@ -37,10 +37,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6x-co-AoF" userLabel="list View">
-                                        <rect key="frame" x="328" y="15.5" width="33" height="33"/>
+                                        <rect key="frame" x="336" y="17.5" width="29" height="29"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rcF-9R-5D3">
-                                                <rect key="frame" x="0.0" y="3" width="33" height="27"/>
+                                                <rect key="frame" x="0.0" y="3" width="29" height="23"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                         </subviews>
@@ -53,10 +53,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-AU-fRt" userLabel="search View">
-                                        <rect key="frame" x="284.5" y="15.5" width="33.5" height="33"/>
+                                        <rect key="frame" x="297" y="17.5" width="29" height="29"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xy6-5B-WDh">
-                                                <rect key="frame" x="0.0" y="0.5" width="33.5" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.5" width="29" height="27.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                         </subviews>
@@ -109,13 +109,13 @@
                                     <constraint firstItem="Q6x-co-AoF" firstAttribute="width" secondItem="Q6x-co-AoF" secondAttribute="height" multiplier="1:1" id="9d8-aR-I6X"/>
                                     <constraint firstItem="j8T-kB-OAU" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.4" id="9g2-Df-4M7"/>
                                     <constraint firstItem="j8T-kB-OAU" firstAttribute="centerY" secondItem="Ja4-Ia-f2F" secondAttribute="centerY" id="9mm-Ug-Ckp"/>
-                                    <constraint firstItem="1Lu-SP-kUx" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.08" id="G5q-8h-gHN"/>
+                                    <constraint firstItem="1Lu-SP-kUx" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.07" id="G5q-8h-gHN"/>
                                     <constraint firstItem="1Lu-SP-kUx" firstAttribute="leading" secondItem="Q6x-co-AoF" secondAttribute="trailing" constant="10" id="GNm-vG-HGH"/>
-                                    <constraint firstItem="Q6x-co-AoF" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.08" id="H0R-gQ-o9N"/>
+                                    <constraint firstItem="Q6x-co-AoF" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.07" id="H0R-gQ-o9N"/>
                                     <constraint firstAttribute="trailing" secondItem="8z7-SD-f6v" secondAttribute="trailing" id="Izd-Ks-uhw"/>
                                     <constraint firstItem="1Lu-SP-kUx" firstAttribute="centerY" secondItem="Ja4-Ia-f2F" secondAttribute="centerY" id="M0i-vV-7AP"/>
                                     <constraint firstItem="8z7-SD-f6v" firstAttribute="leading" secondItem="Ja4-Ia-f2F" secondAttribute="leading" id="NHE-k2-Wcb"/>
-                                    <constraint firstItem="B7P-AU-fRt" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.08" id="Q90-Kb-22c"/>
+                                    <constraint firstItem="B7P-AU-fRt" firstAttribute="width" secondItem="Ja4-Ia-f2F" secondAttribute="width" multiplier="0.07" id="Q90-Kb-22c"/>
                                     <constraint firstAttribute="bottom" secondItem="8z7-SD-f6v" secondAttribute="bottom" id="UhI-Zv-JGn"/>
                                     <constraint firstItem="B7P-AU-fRt" firstAttribute="centerY" secondItem="Q6x-co-AoF" secondAttribute="centerY" id="aUF-fV-vXO"/>
                                     <constraint firstItem="B7P-AU-fRt" firstAttribute="width" secondItem="B7P-AU-fRt" secondAttribute="height" multiplier="1:1" id="hOD-DM-MhY"/>
@@ -140,14 +140,82 @@
                             <constraint firstItem="lVf-7z-lX6" firstAttribute="top" secondItem="Ja4-Ia-f2F" secondAttribute="bottom" id="dke-wo-Iqi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="XFZ-P5-Q4P"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="XFZ-P5-Q4P"/>
                     <connections>
                         <outlet property="tableView" destination="lVf-7z-lX6" id="g7V-TP-Zco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1165" y="929"/>
+            <point key="canvasLocation" x="-1454" y="929"/>
+        </scene>
+        <!--동네생활-->
+        <scene sceneID="Bv3-gd-sTn">
+            <objects>
+                <viewController id="jm1-cR-I8q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="niT-sK-7yr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="baf-El-tgU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="동네생활" image="newspaper" catalog="system" selectedImage="newspaper.fill" id="tfG-lc-4TT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69j-nD-Jra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706" y="929"/>
+        </scene>
+        <!--내 근처-->
+        <scene sceneID="y46-Qq-TlZ">
+            <objects>
+                <viewController id="XIM-f1-TV4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6zP-A3-Bsc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2eQ-TS-bQ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="내 근처" image="location.circle" catalog="system" selectedImage="location.circle.fill" id="fF6-l9-urK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oo2-AW-Lx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="929"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="tWh-lB-bIJ">
+            <objects>
+                <viewController id="X7Y-3y-tvM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qjm-po-sXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Bo-Sh-JhH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채팅" image="bubble.right" catalog="system" selectedImage="bubble.right.fill" id="sxr-sJ-Pm2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubc-E9-Ava" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="929"/>
+        </scene>
+        <!--나의 당근-->
+        <scene sceneID="Yvb-ht-fuF">
+            <objects>
+                <viewController id="FH2-if-zko" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbD-Zk-eeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wGE-AY-2zp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="나의 당근" image="person" catalog="system" selectedImage="person.fill" id="v5Z-D1-TpJ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abc-Fm-oV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555" y="929"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ulB-6M-1ub">
@@ -162,6 +230,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4th-sX-9FY"/>
+                        <segue destination="jm1-cR-I8q" kind="relationship" relationship="viewControllers" id="ejb-F2-ASF"/>
+                        <segue destination="XIM-f1-TV4" kind="relationship" relationship="viewControllers" id="xQX-HD-w7Q"/>
+                        <segue destination="X7Y-3y-tvM" kind="relationship" relationship="viewControllers" id="jq9-14-jrO"/>
+                        <segue destination="FH2-if-zko" kind="relationship" relationship="viewControllers" id="A3s-hg-TIM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gR8-1Q-niv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -171,9 +243,18 @@
     </scenes>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="bubble.right" catalog="system" width="128" height="110"/>
+        <image name="bubble.right.fill" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="location.circle" catalog="system" width="128" height="121"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="아래로 아이콘" width="89" height="85"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
