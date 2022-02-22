@@ -50,16 +50,6 @@ class MainViewController: UIViewController {
     
     
     
-    // MARK: - 플로팅 버튼 함수
-    @objc func tap(_ sender: Any) {
-        guard let writingVC = storyboard?.instantiateViewController(withIdentifier: "writingNavigationController") as? UINavigationController else {
-            return
-        }
-        
-        self.present(writingVC, animated: true, completion: nil)
-    }
-    
-    
     
     // MARK: - @objc버튼 정의
     // dismiss

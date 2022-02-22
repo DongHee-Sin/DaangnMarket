@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 
 // MARK: - User
 class UserModel {
@@ -70,10 +72,9 @@ class SalesPostModel {
     }
     
     
-//    func addPost(title: String, content: String, category: ProductCategory) {
-//
-//
-//
-//        storage.append(<#T##newElement: SalesPost##SalesPost#>)
-//    }
+    func addPost(writer: String, title: String, content: String, category: ProductCategory, price: Int? = nil) {
+
+        storage.append(SalesPost(writer: userModel.returnUserInfo(writer), title: title, content: content, price: price, category: category))
+        
+    }
 }

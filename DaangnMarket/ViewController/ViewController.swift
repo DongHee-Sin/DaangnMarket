@@ -100,4 +100,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    
+    
+    // MARK: - 플로팅 버튼 함수
+    @objc func tap(_ sender: Any) {
+        guard let writingVC = storyboard?.instantiateViewController(withIdentifier: "writingNavigationController") as? UINavigationController else {
+            return
+        }
+        
+        guard let writeVC = writingVC.viewControllers[0] as? WritingSalesPostViewController else {
+            return
+        }
+        writeVC.homeVC = self
+        
+        self.present(writingVC, animated: true, completion: nil)
+    }
 }

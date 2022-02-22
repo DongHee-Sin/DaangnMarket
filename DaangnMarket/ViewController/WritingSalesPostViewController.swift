@@ -10,6 +10,11 @@ import UIKit
 
 class WritingSalesPostViewController: MainViewController {
     
+    // ViewController 가져오기 (Model 업데이트 위함)
+    var homeVC: ViewController?
+    
+    
+    
     // MARK: - UI 연결
     // 뒤로가기 버튼
     @IBOutlet weak var dismissButton: UIButton!
@@ -39,6 +44,33 @@ class WritingSalesPostViewController: MainViewController {
     
     // 내용
     @IBOutlet weak var contentTextView: UITextView!
+    
+    
+    
+    
+    // MARK: - 완료 버튼 (글 작성 / Model에 data 추가하기)
+    @IBAction func didTouchedWriteButton(_ sender: UIButton) {
+        
+        guard let userInfoVC = storyboard?.instantiateViewController(withIdentifier: "myDaangnView") as? MyDaangnViewController else {
+            return
+        }
+        print("뷰컨은 가져옴")
+        // 글 작성하는 유저 정보 가져오기
+        let userNickName: String = userInfoVC.userStringName
+        
+        // model에 데이터 추가
+        // 일단 ViewController를 self로 가져와야됨 -> 왜? -> 홈화면VC에 있는 Model을 직접 업데이트 시켜야되서 그럼..
+        homeVC?.tableViewModel.addPost(writer: userNickName, title: titleTextField.text!, content: contentTextView.text!, category: category!, price: Int(priceTextField.text ?? "") ?? nil)
+        
+        
+        // 홈화면 테이블뷰 업데이트
+        homeVC?.tableView.reloadData()
+        
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     
     
