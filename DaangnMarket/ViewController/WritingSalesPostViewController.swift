@@ -19,7 +19,17 @@ class WritingSalesPostViewController: MainViewController {
     
     // 카테고리
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var categoryButton: UIButton!
+    @IBAction func didTouchedCategoryButton(_ sender: UIButton) {
+        guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryView") as? CategoryViewController else {
+            return
+        }
+            
+        categoryVC.writingVC = self
+        
+        self.navigationController?.pushViewController(categoryVC, animated: true)
+//        self.present(categoryVC, animated: true, completion: nil)
+    }
+    
     
     // 가격
     @IBOutlet weak var wonLabel: UILabel!

@@ -33,7 +33,7 @@ struct SalesPost {
 
 
 // MARK: - 상품 카테고리
-enum ProductCategory: String {
+enum ProductCategory: String, CaseIterable {
     case 디지털기기 = "디지털기기"
     case 생활가전 = "생활가전"
     case 가구인테리어 = "가구/인테리어"
@@ -46,6 +46,11 @@ enum ProductCategory: String {
     case 남성의류 = "남성의류"
     case 도서티켓음반 = "도서/티켓/음반"
     case 반려동물용품 = "반려동물용품"
+    case 식물 = "식물"
+    case 삽니다 = "삽니다"
+    case 스포츠레저 = "스포츠/레저"
+    case 뷰티미용 = "뷰티/미용"
+    case 게임취미 = "게임/취미"
     case 기타중고물품 = "기타 중고물품"
 }
 
