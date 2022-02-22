@@ -12,11 +12,24 @@ import UIKit
 // MARK: - UIViewController 커스텀
 class MainViewController: UIViewController {
     
+    // MARK: - UI Image
+    func addRadiusToUIImageView(_ img: UIImageView, size: CGFloat) {
+        img.layer.cornerRadius = size
+    }
+    
+    
+    
+    
     // MARK: - UI View
     func addBorderToUIView(_ to: UIView, size: CGFloat, color: CGColor) {
         to.layer.borderWidth = size
         to.layer.borderColor = color
     }
+    
+    func addRadiusToUIView(_ view: UIView, size: CGFloat) {
+        view.layer.cornerRadius = size
+    }
+    
     
     
     // MARK: - 숫자 -> 콤마찍어서 문자열 반환
@@ -33,6 +46,26 @@ class MainViewController: UIViewController {
     func addRadiusToUIButton(_ button: UIButton, size: CGFloat) {
         button.layer.cornerRadius = size
     }
+    
+    
+    
+    
+    // MARK: - 플로팅 버튼 함수
+    @objc func tap(_ sender: Any) {
+        guard let writingVC = storyboard?.instantiateViewController(withIdentifier: "WritingSalesPostViewController") as? WritingSalesPostViewController else {
+            return
+        }
+        
+        self.present(writingVC, animated: true, completion: nil)
+    }
+    
+    
+    
+    // MARK: - @objc버튼 정의
+    @objc func didTouchedDismissButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
     

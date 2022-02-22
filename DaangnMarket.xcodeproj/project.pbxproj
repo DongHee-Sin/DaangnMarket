@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */; };
 		D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */; };
 		D07619D627C3584500AFDEDC /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07619D527C3584500AFDEDC /* TableViewModel.swift */; };
 		D07AE5C127C2208800774B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C027C2208800774B98 /* AppDelegate.swift */; };
@@ -22,9 +23,14 @@
 		D0D484F927C22E5400129253 /* SalesPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D484F727C22E5400129253 /* SalesPostTableViewCell.xib */; };
 		D0EAC77127C3BC8F005DB956 /* SalesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC77027C3BC8F005DB956 /* SalesPostViewController.swift */; };
 		D0EDAB2C27C3C0D30082A82D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDAB2B27C3C0D30082A82D /* MainTableViewCell.swift */; };
+		DF7832D837D770F645344E66 /* Pods_DaangnMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BED8793AE3F407F73385A06 /* Pods-DaangnMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket.debug.xcconfig"; sourceTree = "<group>"; };
+		2B9E36B4204F0BDA18E1AA98 /* Pods-DaangnMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket.release.xcconfig"; sourceTree = "<group>"; };
+		99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSalesPostViewController.swift; sourceTree = "<group>"; };
 		D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		D07619D527C3584500AFDEDC /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D07AE5BD27C2208800774B98 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,12 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7832D837D770F645344E66 /* Pods_DaangnMarket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DF8D8CE4625AAE4A3116945 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BED8793AE3F407F73385A06 /* Pods-DaangnMarket.debug.xcconfig */,
+				2B9E36B4204F0BDA18E1AA98 /* Pods-DaangnMarket.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5138A4D125B1F463D6741196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D00FC3FD27C49D870041A7E6 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +101,8 @@
 			children = (
 				D07AE5BF27C2208800774B98 /* DaangnMarket */,
 				D07AE5BE27C2208800774B98 /* Products */,
+				1DF8D8CE4625AAE4A3116945 /* Pods */,
+				5138A4D125B1F463D6741196 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +146,7 @@
 				D07AE5C427C2208800774B98 /* ViewController.swift */,
 				D0C9D95F27C37ECC009CCE62 /* MyDaangnViewController.swift */,
 				D0EAC77027C3BC8F005DB956 /* SalesPostViewController.swift */,
+				D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -149,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D07AE5D127C2208A00774B98 /* Build configuration list for PBXNativeTarget "DaangnMarket" */;
 			buildPhases = (
+				1ACADC7D75FE891D6C5E0930 /* [CP] Check Pods Manifest.lock */,
 				D07AE5B927C2208800774B98 /* Sources */,
 				D07AE5BA27C2208800774B98 /* Frameworks */,
 				D07AE5BB27C2208800774B98 /* Resources */,
+				0C709CF6BECD34CBDDA46585 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,11 +238,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C709CF6BECD34CBDDA46585 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ACADC7D75FE891D6C5E0930 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaangnMarket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D07AE5B927C2208800774B98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */,
 				D0EAC77127C3BC8F005DB956 /* SalesPostViewController.swift in Sources */,
 				D07AE5C527C2208800774B98 /* ViewController.swift in Sources */,
 				D07619D627C3584500AFDEDC /* TableViewModel.swift in Sources */,
@@ -368,6 +440,7 @@
 		};
 		D07AE5D227C2208A00774B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BED8793AE3F407F73385A06 /* Pods-DaangnMarket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +468,7 @@
 		};
 		D07AE5D327C2208A00774B98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B9E36B4204F0BDA18E1AA98 /* Pods-DaangnMarket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
