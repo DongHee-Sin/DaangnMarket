@@ -18,6 +18,7 @@ class WritingSalesPostViewController: MainViewController {
     @IBOutlet weak var titleTextField: UITextField!
     
     // 카테고리
+    var category: ProductCategory?
     @IBOutlet weak var categoryLabel: UILabel!
     @IBAction func didTouchedCategoryButton(_ sender: UIButton) {
         guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryView") as? CategoryViewController else {

@@ -1488,7 +1488,7 @@
         <!--나의 당근-->
         <scene sceneID="Yvb-ht-fuF">
             <objects>
-                <viewController id="FH2-if-zko" customClass="MyDaangnViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myDaangnView" id="FH2-if-zko" customClass="MyDaangnViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bbD-Zk-eeQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

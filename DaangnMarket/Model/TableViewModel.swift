@@ -70,7 +70,10 @@ class SalesPostModel {
     }
     
     
-//    func addPost(title: String, content: String, ) {
-//        
+//    func addPost(title: String, content: String, category: ProductCategory) {
+//
+//
+//
+//        storage.append(<#T##newElement: SalesPost##SalesPost#>)
 //    }
 }

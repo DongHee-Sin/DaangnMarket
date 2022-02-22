@@ -22,6 +22,19 @@ class CategoryViewController: MainViewController {
     var writingVC: WritingSalesPostViewController?
     
     
+    
+    // MARK: - TableViewCell 선택된거 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        writingVC?.categoryLabel.text = categoryList[indexPath.row].rawValue
+        writingVC?.category = categoryList[indexPath.row]
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +56,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.cellUpdate(categoryList[indexPath.row])
+        cell.selectionStyle = .none
         
         return cell
     }
