@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */; };
 		D07619D627C3584500AFDEDC /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07619D527C3584500AFDEDC /* TableViewModel.swift */; };
 		D07AE5C127C2208800774B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C027C2208800774B98 /* AppDelegate.swift */; };
 		D07AE5C327C2208800774B98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C227C2208800774B98 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		D07619D527C3584500AFDEDC /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D07AE5BD27C2208800774B98 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07AE5C027C2208800774B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00FC3FD27C49D870041A7E6 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		D07619D727C35A0A00AFDEDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				D07AE5D727C2255200774B98 /* ViewController */,
 				D07AE5C627C2208800774B98 /* Main.storyboard */,
 				D07619D727C35A0A00AFDEDC /* Model */,
+				D00FC3FD27C49D870041A7E6 /* CollectionViewCell */,
 				D0D484FA27C22E5A00129253 /* TableViewCell */,
 				D0EDAB2D27C3C25E0082A82D /* Custom */,
 				D07AE5C927C2208A00774B98 /* Assets.xcassets */,
@@ -213,6 +224,7 @@
 				D0C9D96027C37ECC009CCE62 /* MyDaangnViewController.swift in Sources */,
 				D07AE5D527C224A000774B98 /* MainViewController.swift in Sources */,
 				D0C9D95E27C37E64009CCE62 /* DataType.swift in Sources */,
+				D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

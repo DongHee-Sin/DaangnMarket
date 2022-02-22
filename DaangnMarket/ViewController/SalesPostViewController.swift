@@ -78,6 +78,19 @@ class SalesPostViewController: MainViewController {
     
     
     
+    
+    
+    // MARK: - CollectionView 설정
+    let salesModel: SalesPostModel = SalesPostModel()
+    @IBOutlet weak var collectioinView: UICollectionView!
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,5 +101,87 @@ class SalesPostViewController: MainViewController {
         
         // UI 업데이트
         updatePost(receivedData!)
+        
+        
+        // 컬렉션 뷰 설정
+        collectioinView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectioinView.delegate = self
+        collectioinView.dataSource = self
+        
+        // 스크롤 끄는거같은데... 안되는디..
+        collectioinView.isScrollEnabled = false
+        
+        // 컬렉션뷰 레이아웃 설정
+        collectioinView.collectionViewLayout = createCompositionalLayout()
     }
+    
+}
+
+
+
+// MARK: - CollectionView 컴포지셔널 레이아웃 관련 함수
+extension SalesPostViewController {
+    // 컴포지셔널 레이아웃 설정
+    fileprivate func createCompositionalLayout() -> UICollectionViewLayout {
+        // 컴포지셔널 레이아웃 생성
+        let layout = UICollectionViewCompositionalLayout{
+            // 생성되면 (Key: Value)의 묶음으로 들어옴 / 변환하는 값은 NSCollectionLayoutSection 콜렉션 레이아웃 섹션을 반환해야함
+            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            
+            
+            // 각 아이템의 사이즈
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .absolute(250))
+            
+            // 위에서 만든 아이템 사이즈로 아이템 만들기
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            // 아이템 간의 간격 설정
+            item.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
+            
+            // 그룹 사이즈
+            let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: itemSize.heightDimension)
+            
+            // 그룹사이즈로 그룹 만들기
+            let groub = NSCollectionLayoutGroup.horizontal(layoutSize: groubSize, subitem: item, count: 2)
+            
+            // 그룹으로 섹션 만들기
+            let section = NSCollectionLayoutSection(group: groub)
+            
+            // 섹션에 대한 간격 설정
+            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+            
+            return section
+        }
+        
+        return layout
+    }
+}
+
+
+
+
+
+
+
+// MARK: - Protocol 채택
+extension SalesPostViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    // 몇개의 아이템을 보여줄건지
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "salesCollectionViewCell", for: indexPath) as? SalesPostCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.cellUpdate(salesModel.returnPostInfo(indexPath.item))
+        
+        
+        
+        return cell
+    }
+    
+    
 }

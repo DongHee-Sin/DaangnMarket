@@ -67,11 +67,3 @@ class SalesPostModel {
 //        
 //    }
 }
-
-
-
-// MARK: - 동네생활글 Model
-
-
-
-
