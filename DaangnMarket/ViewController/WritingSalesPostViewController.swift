@@ -116,6 +116,12 @@ class WritingSalesPostViewController: MainViewController {
             priceTextField.textColor = UIColor.lightGray
             priceTextField.text = "가격 (선택사항)"
             priceTextField.delegate = self
+            
+            // 왼쪽 원화, 오른쪽 버튼 설정
+            wonLabel.textColor = UIColor.lightGray
+            priceSuggestionButton.tintColor = UIColor.lightGray
+            priceSuggestionButton.setTitleColor(.lightGray, for: .normal)
+            
         }else {
             // 글을 수정하는 경우
             titleTextField.text = salesPostVC?.postTitle.text
