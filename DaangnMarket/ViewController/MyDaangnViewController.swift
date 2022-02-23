@@ -17,5 +17,8 @@ class MyDaangnViewController: MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 저장된 유저 이름으로 Label 업데이트
+        userNickName.text = self.userStringName
     }
 }

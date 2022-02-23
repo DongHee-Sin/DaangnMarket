@@ -11,10 +11,105 @@ import UIKit
 
 class SalesPostViewController: MainViewController {
     
-    // 뒤로가기 버튼
+    // MARK: - Alert 구현
+    @IBAction func didTouchedAlertButton(_ sender: UIButton) {
+        // 사용자 아이디와 글 작성자를 비교하여 서로 다른 알람이 나오도록 하자
+        
+        // 1. 사용자 아이디 가져오기
+        guard let userInfoVC = storyboard?.instantiateViewController(withIdentifier: "myDaangnView") as? MyDaangnViewController else {
+            return
+        }
+        let userNickName: String = userInfoVC.userStringName
+        
+        // 2. 사용자와 글 작성자 비교하기
+        if userNickName == nickName.text! {
+            // 사용자와 글 작성자가 같을 때
+            showPostSettingAlert()
+        }else {
+            // 사용자와 글 작성자가 다를 때
+            showNomalAlert()
+        }
+    }
+    
+    // 수정/삭제 가능한 알림창
+    func showPostSettingAlert() {
+        // alert controller 생성
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // 게시글 수정
+        let modify = UIAlertAction(title: "게시글 수정", style: .default, handler: { (action) in
+            print("게시글 수정 버튼 눌림")
+        })
+        
+        // 끌어올리기
+        let pullUp = UIAlertAction(title: "끌어올리기", style: .default, handler: { (action) in
+            print("끌어올리기 버튼 눌림")
+        })
+        
+        // 숨기기
+        let hide = UIAlertAction(title: "숨기기", style: .default, handler: { (action) in
+            print("숨기기 버튼 눌림")
+        })
+        
+        // 삭제
+        let delete = UIAlertAction(title: "삭제", style: .destructive, handler: { (action) in
+            print("삭제 버튼 눌림")
+        })
+        
+        // 취소
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: { (action) in
+            print("취소 버튼 눌림")
+        })
+        
+        // alert에 버튼들 추가
+        alert.addAction(modify)
+        alert.addAction(pullUp)
+        alert.addAction(hide)
+        alert.addAction(delete)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    func showNomalAlert() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let report = UIAlertAction(title: "신고", style: .default, handler: { (action) in
+            print("신고 버튼 눌림")
+        })
+        
+        let block = UIAlertAction(title: "이 사용자의 글 보지 않기", style: .default, handler: { (action) in
+            print("차단 버튼 눌림")
+        })
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: { (action) in
+            print("취소 버튼 눌림")
+        })
+        
+        alert.addAction(report)
+        alert.addAction(block)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // MARK: - 뒤로가기 버튼
     @IBAction func didTouchedPopButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
     
     // MARK: - UI 연결
     // 채팅거는 버튼
@@ -99,7 +194,7 @@ class SalesPostViewController: MainViewController {
     
     
     
-    // 글 정보 받아오기
+    // MARK: - 글 정보 & 홈화면VC 가져오기
     var receivedData: SalesPost?
     var mainVC: ViewController?
     

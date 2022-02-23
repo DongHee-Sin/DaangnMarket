@@ -55,6 +55,11 @@ enum ProductCategory: String, CaseIterable {
 }
 
 
-// MARK: - 동네생활글 카테고리
 
+
+// MARK: - 글쓰기 View Header Text
+enum HeaderText: String {
+    case 거래추가 = "중고거래 글쓰기"
+    case 거래수정 = "중고거래 글 수정하기"
+}
 

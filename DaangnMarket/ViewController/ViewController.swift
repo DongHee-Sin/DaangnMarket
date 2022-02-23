@@ -112,6 +112,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         writeVC.homeVC = self
+        writeVC.headerText = HeaderText.거래추가.rawValue
         
         self.present(writingVC, animated: true, completion: nil)
     }

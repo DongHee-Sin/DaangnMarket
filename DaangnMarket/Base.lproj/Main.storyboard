@@ -194,8 +194,8 @@
                                             <constraint firstAttribute="trailing" secondItem="hsS-4Z-lGh" secondAttribute="trailing" id="xsK-8w-Mrk"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중고거래 글쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-mD-BNK">
-                                        <rect key="frame" x="153.5" y="15.5" width="107.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="header text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-mD-BNK">
+                                        <rect key="frame" x="161.5" y="15.5" width="91" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -520,6 +520,7 @@
                         <outlet property="categoryLabel" destination="RQl-oQ-Ojx" id="PR4-m8-pLM"/>
                         <outlet property="contentTextView" destination="8kf-l3-u2W" id="t0W-qx-tFJ"/>
                         <outlet property="dismissButton" destination="R3y-2F-awn" id="bR3-o8-BXo"/>
+                        <outlet property="headerLabel" destination="PCM-mD-BNK" id="95d-eh-Xlr"/>
                         <outlet property="priceSuggestionButton" destination="xRI-nL-1k9" id="SCz-Ua-BON"/>
                         <outlet property="priceTextField" destination="yCr-nw-yt2" id="OIQ-xj-fxK"/>
                         <outlet property="titleTextField" destination="RCf-LI-hqq" id="yw5-ed-cr6"/>
@@ -693,7 +694,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="41.5" height="41.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-gf-ikI">
-                                                        <rect key="frame" x="6.5" y="5.5" width="29" height="30"/>
+                                                        <rect key="frame" x="8.5" y="7.5" width="25" height="26"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7dv-gf-ikI" secondAttribute="height" multiplier="1:1" id="uKI-RO-Roy"/>
@@ -702,7 +703,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="7dv-gf-ikI" firstAttribute="width" secondItem="pfD-q2-OHI" secondAttribute="width" multiplier="0.7" id="9P5-jZ-RWb"/>
+                                                    <constraint firstItem="7dv-gf-ikI" firstAttribute="width" secondItem="pfD-q2-OHI" secondAttribute="width" multiplier="0.6" id="9P5-jZ-RWb"/>
                                                     <constraint firstItem="7dv-gf-ikI" firstAttribute="centerX" secondItem="pfD-q2-OHI" secondAttribute="centerX" id="O15-Tl-G13"/>
                                                     <constraint firstItem="7dv-gf-ikI" firstAttribute="centerY" secondItem="pfD-q2-OHI" secondAttribute="centerY" id="wnY-B6-2aZ"/>
                                                 </constraints>
@@ -710,19 +711,31 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRk-P6-OyH" userLabel="옵션버튼">
                                                 <rect key="frame" x="41.5" y="0.0" width="41.5" height="41.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-kJ-n7s">
-                                                        <rect key="frame" x="6.5" y="9" width="29" height="23.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="점3개" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-kJ-n7s">
+                                                        <rect key="frame" x="8.5" y="8.5" width="24.5" height="25"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="EdI-kJ-n7s" secondAttribute="height" multiplier="1:1" id="1Wx-e5-i0C"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hid-sJ-nZu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="41.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="didTouchedAlertButton:" destination="h4h-W6-Pc6" eventType="touchUpInside" id="cLZ-Z3-RI0"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="EdI-kJ-n7s" firstAttribute="width" secondItem="JRk-P6-OyH" secondAttribute="width" multiplier="0.7" id="eL7-Od-9sd"/>
+                                                    <constraint firstItem="hid-sJ-nZu" firstAttribute="top" secondItem="JRk-P6-OyH" secondAttribute="top" id="SA7-BK-ERK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hid-sJ-nZu" secondAttribute="bottom" id="WO2-Kn-lh0"/>
+                                                    <constraint firstItem="EdI-kJ-n7s" firstAttribute="width" secondItem="JRk-P6-OyH" secondAttribute="width" multiplier="0.6" id="eL7-Od-9sd"/>
                                                     <constraint firstItem="EdI-kJ-n7s" firstAttribute="centerX" secondItem="JRk-P6-OyH" secondAttribute="centerX" id="ez0-R5-KH1"/>
                                                     <constraint firstItem="EdI-kJ-n7s" firstAttribute="centerY" secondItem="JRk-P6-OyH" secondAttribute="centerY" id="h4h-eH-ugc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hid-sJ-nZu" secondAttribute="trailing" id="zCG-t2-6wh"/>
+                                                    <constraint firstItem="hid-sJ-nZu" firstAttribute="leading" secondItem="JRk-P6-OyH" secondAttribute="leading" id="zdh-9P-uJd"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1590,7 +1603,6 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="location.circle" catalog="system" width="128" height="121"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
@@ -1615,6 +1627,7 @@
         <image name="안전화" width="482" height="357"/>
         <image name="앞으로 누끼" width="200" height="196"/>
         <image name="오디오믹서" width="481" height="352"/>
+        <image name="점3개" width="44" height="49"/>
         <image name="파란얼굴" width="76" height="76"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -35,6 +35,9 @@ class UserModel {
 
 
 
+
+
+
 // MARK: - SalesPostModel
 class SalesPostModel {
     private var storage: [SalesPost] = []
@@ -71,10 +74,15 @@ class SalesPostModel {
         storage[selectedIndex].viewCount += 1
     }
     
-    
+    // 글 작성
     func addPost(writer: String, title: String, content: String, category: ProductCategory, price: Int? = nil) {
 
         storage.append(SalesPost(writer: userModel.returnUserInfo(writer), title: title, content: content, price: price, category: category))
         
     }
+    
+    // 글 수정
+//    func modifyPost(title: String, content: String, category: ProductCategory, price: Int? = nil) {
+//
+//    }
 }
