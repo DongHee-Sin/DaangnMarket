@@ -1440,6 +1440,7 @@
                         <outlet property="nickName" destination="1s3-OE-cyp" id="Q3i-4Y-qx0"/>
                         <outlet property="postCategory" destination="wqd-il-gyy" id="rkQ-lE-a2M"/>
                         <outlet property="postContent" destination="upx-f7-Fet" id="3Ah-fb-B2t"/>
+                        <outlet property="postPrice" destination="lG8-Rv-4Ch" id="07H-Tn-RQX"/>
                         <outlet property="postTitle" destination="Nnm-5D-Jqi" id="i6g-YR-7aT"/>
                         <outlet property="productImage" destination="evi-fJ-0WP" id="zJA-ie-En9"/>
                         <outlet property="temperature" destination="A40-sF-nUP" id="lMp-OM-4qu"/>

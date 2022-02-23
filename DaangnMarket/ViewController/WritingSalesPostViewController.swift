@@ -17,8 +17,12 @@ class WritingSalesPostViewController: MainViewController {
     
     
     
-    // MARK: - 메인화면 ViewController 가져오기 (Model 업데이트 위함)
+    // MARK: - ViewController 가져오기
+    // 홈화면 뷰컨  -> homeVC에 있는 Modal의 값을 추가/변경/삭제 하기 위한 연결
     var homeVC: ViewController?
+    
+    // salesPostVC -> 글을 수정할 경우 기존 작성되어 있던 글 정보를 불러오기 위한 연결
+    var salesPostVC: SalesPostViewController?
     
     
     
@@ -40,7 +44,6 @@ class WritingSalesPostViewController: MainViewController {
         categoryVC.writingVC = self
         
         self.navigationController?.pushViewController(categoryVC, animated: true)
-//        self.present(categoryVC, animated: true, completion: nil)
     }
     
     
@@ -71,10 +74,9 @@ class WritingSalesPostViewController: MainViewController {
             // 글 작성
             homeVC?.tableViewModel.addPost(writer: userNickName, title: titleTextField.text!, content: contentTextView.text!, category: category!, price: Int(priceTextField.text ?? "") ?? nil)
         }else {
-            /// 1. 글을 수정하는 경우 작동할 코드임
-            /// 2. 글 수정하는 버튼으로 View전환이 된 경우, 수정하는 글을 Modal에서 찾을 수 있도록 identifier: String 변수를 하나 만들어서 초기 제목을 넣어줘야됨
-            /// 3. Modal의 modifyPost()함수에서는 해당 identifier을 사용하여 firstIndex()로 수정되는 글의 index를 찾고
-            /// 4. 찾은 index의 값에 접근하여 글을 수정하는 방식으로 접근하자
+            // 글 수정
+            homeVC?.tableViewModel.modifyPost(identifier: salesPostVC!.receivedData!.identifier, title: titleTextField.text!, content: contentTextView.text!, category: category!, price: Int(priceTextField.text ?? "") ?? nil)
+            salesPostVC?.updatePost(homeVC!.tableViewModel.returnPostInfo(salesPostVC!.receivedData!.identifier))
         }
 
         
@@ -90,7 +92,7 @@ class WritingSalesPostViewController: MainViewController {
     
     
     
-    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,18 +100,30 @@ class WritingSalesPostViewController: MainViewController {
         dismissButton.addTarget(self, action: #selector(didTouchedDismissButton), for: .touchUpInside)
         
         
-        // textView 설정
-        contentTextView.textColor = UIColor.lightGray
-        contentTextView.text = "청덕동에 올릴 게시글 내용을 작성해주세요.(가품 및 판매금지품목은 게시가 제한될 수 있어요.)"
-        contentTextView.delegate = self
-        
-        // textField 설정
-        priceTextField.textColor = UIColor.lightGray
-        priceTextField.text = "가격 (선택사항)"
-        priceTextField.delegate = self
-        
         // HeaderText 설정
         headerLabel.text = headerText!
+        
+        // 새로 글 작성하는 경우에만 PlaceHolder 설정
+        if headerLabel.text! == "중고거래 글쓰기" {
+            // 새로 작성하는 경우
+            
+            // textView 설정
+            contentTextView.textColor = UIColor.lightGray
+            contentTextView.text = "청덕동에 올릴 게시글 내용을 작성해주세요.(가품 및 판매금지품목은 게시가 제한될 수 있어요.)"
+            contentTextView.delegate = self
+            
+            // textField 설정
+            priceTextField.textColor = UIColor.lightGray
+            priceTextField.text = "가격 (선택사항)"
+            priceTextField.delegate = self
+        }else {
+            // 글을 수정하는 경우
+            titleTextField.text = salesPostVC?.postTitle.text
+            category = salesPostVC?.receivedData?.category
+            categoryLabel.text = category?.rawValue
+            priceTextField.text = salesPostVC?.receivedData?.price == nil ? "" : String((salesPostVC?.receivedData?.price!)!)
+            contentTextView.text = salesPostVC?.postContent.text
+        }
     }
 }
 

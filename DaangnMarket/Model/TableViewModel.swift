@@ -70,7 +70,11 @@ class SalesPostModel {
     
     // 조회수 +1
     func addViewCount(_ identifier: Int) {
-        storage[identifier].viewCount += 1
+        
+        let targetIndex = storage.firstIndex(where: {
+            $0.identifier == identifier
+        })
+        storage[targetIndex!].viewCount += 1
     }
     
     // 글 작성
@@ -81,12 +85,22 @@ class SalesPostModel {
     }
     
     // 글 수정
-//    func modifyPost(title: String, content: String, category: ProductCategory, price: Int? = nil) {
-//
-//    }
+    func modifyPost(identifier: Int, title: String, content: String, category: ProductCategory, price: Int? = nil) {
+        let targetIndex = storage.firstIndex(where: {
+            $0.identifier == identifier
+        })
+        storage[targetIndex!].title = title
+        storage[targetIndex!].content = content
+        storage[targetIndex!].category = category
+        storage[targetIndex!].price = price
+    }
     
 //    // 글 삭제
     func deletePost(_ identifier: Int) {
-        storage.remove(at: identifier)
+        
+        let targetIndex = storage.firstIndex(where: {
+            $0.identifier == identifier
+        })
+        storage.remove(at: targetIndex!)
     }
 }

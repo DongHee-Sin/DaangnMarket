@@ -39,6 +39,26 @@ class SalesPostViewController: MainViewController {
         // 게시글 수정
         let modify = UIAlertAction(title: "게시글 수정", style: .default, handler: { (action) in
             print("게시글 수정 버튼 눌림")
+            
+            guard let navigationVC = self.storyboard?.instantiateViewController(withIdentifier: "writingNavigationController") as? UINavigationController else {
+                return
+            }
+            
+            guard let writingVC = navigationVC.viewControllers[0] as? WritingSalesPostViewController else {
+                return
+            }
+            
+            // header설정
+            writingVC.headerText = HeaderText.거래수정.rawValue
+            
+            // self 넘겨줌 -> 현재 글 상태 정보를 접근하여 writingPostVC의 정보를 업데이트 하려고
+            writingVC.salesPostVC = self
+            
+            // 홈화면 View 넘겨주기
+            writingVC.homeVC = self.mainVC
+            
+            self.present(navigationVC, animated: true, completion: nil)
+            
         })
         
         // 끌어올리기
@@ -131,10 +151,11 @@ class SalesPostViewController: MainViewController {
     @IBOutlet weak var temperature: UIImageView!
     @IBOutlet weak var mannerEnergy: UIImageView!
     
-    // 제목 / 카테고리 / 내용
+    // 제목 / 카테고리 / 내용 / 가격
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postCategory: UILabel!
     @IBOutlet weak var postContent: UILabel!
+    @IBOutlet weak var postPrice: UILabel!
     
     // 채팅 / 관심 / 조회
     @IBOutlet weak var chattingInterestingChecking: UILabel!
@@ -182,6 +203,8 @@ class SalesPostViewController: MainViewController {
         postTitle.text = data.title
         postCategory.text = data.category.rawValue
         postContent.text = data.content
+        postPrice.text = data.price == nil ? "" : data.price == 0 ? "나눔🧡" : DecimalWon(value: data.price!)
+        
         // 채팅 관심 조회수 업데이트
         chattingInterestingChecking.text = "채팅 \(data.chattingCount) ∙ 관심 \(data.interestCount) ∙ 조회 \(data.viewCount+1)"
     }
