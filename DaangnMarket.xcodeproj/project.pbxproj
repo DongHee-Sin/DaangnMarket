@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */; };
 		D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */; };
+		D065D48127C6446600B72D81 /* VillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D065D48027C6446600B72D81 /* VillageLifeViewController.swift */; };
+		D0724E8227C6452F003D0C2B /* VillageLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */; };
+		D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */; };
 		D07619D627C3584500AFDEDC /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07619D527C3584500AFDEDC /* TableViewModel.swift */; };
 		D07AE5C127C2208800774B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C027C2208800774B98 /* AppDelegate.swift */; };
 		D07AE5C327C2208800774B98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C227C2208800774B98 /* SceneDelegate.swift */; };
@@ -35,6 +38,9 @@
 		99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSalesPostViewController.swift; sourceTree = "<group>"; };
 		D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		D065D48027C6446600B72D81 /* VillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeViewController.swift; sourceTree = "<group>"; };
+		D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeTableViewCell.swift; sourceTree = "<group>"; };
+		D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillageLifeTableViewCell.xib; sourceTree = "<group>"; };
 		D07619D527C3584500AFDEDC /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D07AE5BD27C2208800774B98 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07AE5C027C2208800774B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				D07AE5C427C2208800774B98 /* ViewController.swift */,
 				D0C9D95F27C37ECC009CCE62 /* MyDaangnViewController.swift */,
 				D0EAC77027C3BC8F005DB956 /* SalesPostViewController.swift */,
+				D065D48027C6446600B72D81 /* VillageLifeViewController.swift */,
 				D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */,
 				D080D2CE27C528D800306E65 /* CategoryViewController.swift */,
 			);
@@ -165,6 +172,8 @@
 				D0D484F727C22E5400129253 /* SalesPostTableViewCell.xib */,
 				D080D2CA27C5275000306E65 /* CategoryTableViewCell.swift */,
 				D080D2CB27C5275000306E65 /* CategoryTableViewCell.xib */,
+				D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */,
+				D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 			files = (
 				D0D484F927C22E5400129253 /* SalesPostTableViewCell.xib in Resources */,
 				D080D2CD27C5275000306E65 /* CategoryTableViewCell.xib in Resources */,
+				D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */,
 				D07AE5CD27C2208A00774B98 /* LaunchScreen.storyboard in Resources */,
 				D07AE5CA27C2208A00774B98 /* Assets.xcassets in Resources */,
 				D07AE5C827C2208800774B98 /* Main.storyboard in Resources */,
@@ -295,6 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0724E8227C6452F003D0C2B /* VillageLifeTableViewCell.swift in Sources */,
+				D065D48127C6446600B72D81 /* VillageLifeViewController.swift in Sources */,
 				D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */,
 				D0EAC77127C3BC8F005DB956 /* SalesPostViewController.swift in Sources */,
 				D080D2CF27C528D800306E65 /* CategoryViewController.swift in Sources */,
