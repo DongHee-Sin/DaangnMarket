@@ -119,9 +119,10 @@ class WritingSalesPostViewController: MainViewController {
         }else {
             // 글을 수정하는 경우
             titleTextField.text = salesPostVC?.postTitle.text
-            category = salesPostVC?.receivedData?.category
+            category = salesPostVC?.mainVC?.tableViewModel.returnPostInfo((salesPostVC?.receivedData!.identifier)!).category
             categoryLabel.text = category?.rawValue
-            priceTextField.text = salesPostVC?.receivedData?.price == nil ? "" : String((salesPostVC?.receivedData?.price!)!)
+            let inModelPrice = salesPostVC?.mainVC?.tableViewModel.returnPostInfo((salesPostVC?.receivedData!.identifier)!).price
+            priceTextField.text = inModelPrice == nil ? "" : String(inModelPrice!)
             contentTextView.text = salesPostVC?.postContent.text
         }
     }
