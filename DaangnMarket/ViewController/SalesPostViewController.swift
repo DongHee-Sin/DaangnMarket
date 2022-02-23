@@ -54,6 +54,9 @@ class SalesPostViewController: MainViewController {
         // 삭제
         let delete = UIAlertAction(title: "삭제", style: .destructive, handler: { (action) in
             print("삭제 버튼 눌림")
+            self.mainVC?.tableViewModel.deletePost(self.receivedData!.identifier)
+            self.mainVC?.tableView.reloadData()
+            self.navigationController?.popViewController(animated: true)
         })
         
         // 취소
@@ -146,6 +149,7 @@ class SalesPostViewController: MainViewController {
     @IBOutlet weak var image5: UIImageView!
     @IBOutlet weak var image6: UIImageView!
     
+    // 스택뷰 이미지에 Radius 추가
     func addRadius() {
         addRadiusToUIImageView(image1, size: 10)
         addRadiusToUIImageView(image2, size: 10)
@@ -212,7 +216,7 @@ class SalesPostViewController: MainViewController {
         
         
         // 조회수 +1
-        mainVC?.tableViewModel.addViewCount(receivedData!.title)
+        mainVC?.tableViewModel.addViewCount(receivedData!.identifier)
         
         
         // UI 업데이트

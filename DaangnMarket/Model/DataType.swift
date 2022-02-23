@@ -28,6 +28,7 @@ struct SalesPost {
     var chattingCount: Int = 0
     var interestCount: Int = 0
     var viewCount: Int = 0
+    var identifier: Int
 }
 
 
