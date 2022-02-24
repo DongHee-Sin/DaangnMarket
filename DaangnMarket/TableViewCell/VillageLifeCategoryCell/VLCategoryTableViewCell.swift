@@ -21,7 +21,7 @@ class VLCategoryTableViewCell: UITableViewCell {
         
         for eachView in categoryStackView.subviews {
             eachView.layer.borderWidth = 1
-            eachView.layer.borderColor = UIColor.lightGray.cgColor
+            eachView.layer.borderColor = UIColor.systemGray5.cgColor
             eachView.layer.cornerRadius = 5
         }
     }

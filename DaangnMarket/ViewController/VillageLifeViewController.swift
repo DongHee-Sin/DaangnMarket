@@ -29,6 +29,8 @@ class VillageLifeViewController: MainViewController {
         tableView.register(categoryNib, forCellReuseIdentifier: "VLCategoryTableViewCell")
         tableView.register(cellNib, forCellReuseIdentifier: "VillageLifeTableViewCell")
         
+        // 동적 높이 조절
+        tableView.estimatedRowHeight = tableView.frame.width / 10
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.delegate = self
@@ -40,38 +42,25 @@ class VillageLifeViewController: MainViewController {
 
 extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return tableView.frame.width / 5
-        default:
-            return 320
-        }
-    }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "VLCategoryTableViewCell", for: indexPath) as? VLCategoryTableViewCell else {
-//                return UITableViewCell()
-//            }
-//            return cell
-//        }else {
-//            guard let postCell = tableView.dequeueReusableCell(withIdentifier: "VillageLifeTableViewCell", for: indexPath) as? VillageLifeTableViewCell else {
-//                return UITableViewCell()
-//            }
-//            postCell.cellUpdate(tableViewModel.returnPostInfo(indexPath.row-1))
-//            return postCell
-//        }
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VLCategoryTableViewCell", for: indexPath) as? VLCategoryTableViewCell else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "VLCategoryTableViewCell", for: indexPath) as? VLCategoryTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }else {
+            guard let postCell = tableView.dequeueReusableCell(withIdentifier: "VillageLifeTableViewCell", for: indexPath) as? VillageLifeTableViewCell else {
+                return UITableViewCell()
+            }
+            postCell.cellUpdate(tableViewModel.returnPostInfo(indexPath.row))
+            postCell.selectionStyle = .none
+            return postCell
         }
-        return cell
     }
     
     

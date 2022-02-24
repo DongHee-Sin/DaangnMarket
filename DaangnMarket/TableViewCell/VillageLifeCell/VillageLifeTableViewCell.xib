@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="VillageLifeTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="316" id="KGk-i7-Jjw" customClass="VillageLifeTableViewCell" customModule="villageLifeCell">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="VillageLifeTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="316" id="KGk-i7-Jjw" customClass="VillageLifeTableViewCell" customModule="DaangnMarket" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="316"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8V-hx-mZd" userLabel="카테고리">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mk5-WO-ELK">
-                                <rect key="frame" x="15" y="3" width="59" height="26"/>
+                                <rect key="frame" x="15" y="6.5" width="59" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="동네질문">
@@ -35,37 +35,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mk5-WO-ELK" firstAttribute="centerY" secondItem="m8V-hx-mZd" secondAttribute="centerY" id="H4M-rG-gg6"/>
                             <constraint firstItem="Mk5-WO-ELK" firstAttribute="leading" secondItem="m8V-hx-mZd" secondAttribute="leading" constant="15" id="Wpy-xr-fF5"/>
-                            <constraint firstAttribute="width" secondItem="m8V-hx-mZd" secondAttribute="height" multiplier="10:1" id="fJm-Wc-RhU"/>
+                            <constraint firstAttribute="bottom" secondItem="Mk5-WO-ELK" secondAttribute="bottom" constant="3" id="YDe-ro-zU5"/>
+                            <constraint firstAttribute="width" secondItem="m8V-hx-mZd" secondAttribute="height" multiplier="9:1" id="fJm-Wc-RhU"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q49-ay-eCW" userLabel="내용">
-                        <rect key="frame" x="0.0" y="37" width="320" height="70.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대충 내용 들어간는곳 안녕하세요 이건 냉ㅇ입니다 동네생활뷰에서 최대한 구현하기를 구현하려고합니다 플랜룩스스탠드랑 소니 헤드폰" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-Dh-jCZ">
-                                <rect key="frame" x="15" y="10" width="290" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="UBp-Dh-jCZ" secondAttribute="trailing" constant="15" id="NpX-Bv-dYB"/>
-                            <constraint firstItem="UBp-Dh-jCZ" firstAttribute="top" secondItem="q49-ay-eCW" secondAttribute="top" constant="10" id="OMP-t9-YBh"/>
-                            <constraint firstItem="UBp-Dh-jCZ" firstAttribute="leading" secondItem="q49-ay-eCW" secondAttribute="leading" constant="15" id="mTB-48-eSm"/>
-                            <constraint firstAttribute="bottom" secondItem="UBp-Dh-jCZ" secondAttribute="bottom" constant="10" id="rvT-Qc-UIU"/>
-                        </constraints>
-                    </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="자동차 탄소" translatesAutoresizingMaskIntoConstraints="NO" id="LxZ-gw-7gl">
-                        <rect key="frame" x="0.0" y="107.5" width="320" height="106.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="LxZ-gw-7gl" secondAttribute="height" multiplier="3:1" id="sty-2x-zwc"/>
-                        </constraints>
-                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대충 내용 들어간는곳 안녕하세요 이건 냉ㅇ입니다 동네생활뷰에서 최대한 구현하기를 구현하려고합니다 플랜룩스스탠드랑 소니 헤드폰" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-Dh-jCZ">
+                        <rect key="frame" x="15" y="45.5" width="290" height="165.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkN-at-xCs" userLabel="작성자정보 동네">
-                        <rect key="frame" x="0.0" y="219" width="320" height="32"/>
+                        <rect key="frame" x="0.0" y="226" width="320" height="32"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="탱구 ∙ 구갈동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynm-MG-n93">
                                 <rect key="frame" x="15" y="10" width="56" height="12"/>
@@ -82,7 +64,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NX-Tq-8vc" userLabel="공감하기 댓글쓰기">
-                        <rect key="frame" x="0.0" y="256" width="320" height="40"/>
+                        <rect key="frame" x="0.0" y="263" width="320" height="40"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-xP-Ud9">
                                 <rect key="frame" x="15" y="0.0" width="160" height="40"/>
@@ -160,40 +142,35 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7Z-Ge-Xu3" userLabel="구분선">
-                        <rect key="frame" x="0.0" y="301" width="320" height="13"/>
+                        <rect key="frame" x="0.0" y="308" width="320" height="8"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="w7Z-Ge-Xu3" secondAttribute="height" multiplier="25:1" id="1fs-I8-BHo"/>
+                            <constraint firstAttribute="width" secondItem="w7Z-Ge-Xu3" secondAttribute="height" multiplier="40:1" id="1fs-I8-BHo"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="m8V-hx-mZd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5kY-or-MGC"/>
                     <constraint firstAttribute="trailing" secondItem="WkN-at-xCs" secondAttribute="trailing" id="7j7-Hu-a8M"/>
-                    <constraint firstAttribute="trailing" secondItem="q49-ay-eCW" secondAttribute="trailing" id="9XN-pI-Ncz"/>
                     <constraint firstAttribute="trailing" secondItem="m8V-hx-mZd" secondAttribute="trailing" id="BT2-rh-NBc"/>
-                    <constraint firstItem="q49-ay-eCW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="E2D-XU-05O"/>
-                    <constraint firstItem="q49-ay-eCW" firstAttribute="top" secondItem="m8V-hx-mZd" secondAttribute="bottom" constant="5" id="OHH-BG-mil"/>
+                    <constraint firstItem="UBp-Dh-jCZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ibd-30-8BW"/>
+                    <constraint firstItem="WkN-at-xCs" firstAttribute="top" secondItem="UBp-Dh-jCZ" secondAttribute="bottom" constant="15" id="OoC-Z5-8e9"/>
                     <constraint firstItem="WkN-at-xCs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WTC-WV-65Y"/>
                     <constraint firstAttribute="trailing" secondItem="w7Z-Ge-Xu3" secondAttribute="trailing" id="aQO-88-Ku6"/>
+                    <constraint firstAttribute="bottom" secondItem="w7Z-Ge-Xu3" secondAttribute="bottom" id="aUA-mK-wS5"/>
+                    <constraint firstItem="UBp-Dh-jCZ" firstAttribute="top" secondItem="m8V-hx-mZd" secondAttribute="bottom" constant="10" id="cTb-RD-99d"/>
                     <constraint firstItem="w7Z-Ge-Xu3" firstAttribute="top" secondItem="0NX-Tq-8vc" secondAttribute="bottom" constant="5" id="e9s-j2-on3"/>
                     <constraint firstItem="m8V-hx-mZd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ff1-0y-PQD"/>
-                    <constraint firstItem="LxZ-gw-7gl" firstAttribute="top" secondItem="q49-ay-eCW" secondAttribute="bottom" id="hWI-Q8-cvw"/>
                     <constraint firstItem="w7Z-Ge-Xu3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jxa-Mf-C44"/>
                     <constraint firstItem="0NX-Tq-8vc" firstAttribute="top" secondItem="WkN-at-xCs" secondAttribute="bottom" constant="5" id="kz0-AJ-p5U"/>
                     <constraint firstAttribute="trailing" secondItem="0NX-Tq-8vc" secondAttribute="trailing" id="n8S-KX-LtE"/>
                     <constraint firstItem="0NX-Tq-8vc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nLI-Lv-RNQ"/>
-                    <constraint firstItem="WkN-at-xCs" firstAttribute="top" secondItem="LxZ-gw-7gl" secondAttribute="bottom" constant="5" id="wBL-PW-p9O"/>
+                    <constraint firstAttribute="trailing" secondItem="UBp-Dh-jCZ" secondAttribute="trailing" constant="15" id="zme-8I-tNC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="LxZ-gw-7gl" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="6I0-Gv-aO6"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="LxZ-gw-7gl" secondAttribute="trailing" id="DjC-5Y-PNz"/>
-            </constraints>
             <connections>
                 <outlet property="contentLabel" destination="UBp-Dh-jCZ" id="HWq-tj-0Ma"/>
-                <outlet property="postImage" destination="LxZ-gw-7gl" id="Alw-Cn-p2N"/>
                 <outlet property="userNameAndAddress" destination="ynm-MG-n93" id="AfJ-CP-RXX"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="198.21428571428569"/>
@@ -202,7 +179,6 @@
     <resources>
         <image name="공감하기" width="50" height="51"/>
         <image name="댓글쓰기" width="48" height="48"/>
-        <image name="자동차 탄소" width="1125" height="1590"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

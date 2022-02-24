@@ -15,8 +15,6 @@ class VillageLifeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userNameAndAddress: UILabel!
     
-    @IBOutlet weak var postImage: UIImageView!
-    
     
     
     
@@ -24,6 +22,9 @@ class VillageLifeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
+        let newLabelSize = contentLabel.sizeThatFits(CGSize(width: contentLabel.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        contentLabel.frame.size = newLabelSize
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,10 +37,10 @@ class VillageLifeTableViewCell: UITableViewCell {
     func cellUpdate(_ data: VillageLifePost) {
         contentLabel.text = data.content
         userNameAndAddress.text = "\(data.writer.nickName) ∙ \(data.writer.address)"
-        if data.imageString == nil {
-            postImage.isHidden = true
-        }else {
-            postImage.image = UIImage(named: data.imageString!)
-        }
+//        if data.imageString == nil {
+//            postImage.isHidden = true
+//        }else {
+//            postImage.image = UIImage(named: data.imageString!)
+//        }
     }
 }
