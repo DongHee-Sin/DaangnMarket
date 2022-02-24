@@ -10,6 +10,16 @@ import UIKit
 class UserSettingTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var settingCellImage: UIImageView!
+    
+    @IBOutlet weak var settingCellLabel: UILabel!
+    
+    
+    // 셀 업데이트
+    func cellUpdate(_ data: Setting) {
+        settingCellImage.image = UIImage(systemName: data.imageString)
+        settingCellLabel.text = data.text
+    }
     
     
     

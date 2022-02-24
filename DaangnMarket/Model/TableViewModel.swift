@@ -144,3 +144,53 @@ class VillageLiftPostModel {
         return storage[index]
     }
 }
+
+
+
+
+class SettingModel {
+    private var storage: [Int: [Setting]] = [:]
+    
+    init() {
+        storage = [
+            1: [
+                Setting(text: "내 동네 설정", imageString: "location.circle"),
+                Setting(text: "동네 인증하기", imageString: "scope"),
+                Setting(text: "키워드 알림", imageString: "tag"),
+                Setting(text: "관심 카테고리 설정", imageString: "checklist")
+            ],
+            2: [
+                Setting(text: "모아보기", imageString: "square.grid.2x2"),
+                Setting(text: "당근 가계부", imageString: "book.closed"),
+                Setting(text: "받은 쿠폰함", imageString: "ticket"),
+                Setting(text: "내 단골 가게", imageString: "house")
+            ],
+            3: [
+                Setting(text: "동네생활 글/댓글", imageString: "square.and.pencil"),
+                Setting(text: "동네 가게 후기", imageString: "text.bubble")
+            ],
+            4: [
+                Setting(text: "비즈프로필 만들기", imageString: "person"),
+                Setting(text: "동네홍보 글", imageString: "newspaper"),
+                Setting(text: "지역광고", imageString: "megaphone")
+            ],
+            5: [
+                Setting(text: "친구초대", imageString: "envelope"),
+                Setting(text: "당근마켓 공유", imageString: "point.3.connected.trianglepath.dotted"),
+                Setting(text: "공지사항", imageString: "mic"),
+                Setting(text: "자주 묻는 질문", imageString: "questionmark.circle"),
+                Setting(text: "앱 설정", imageString: "gear.circle")
+            ]
+        ]
+    }
+    
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    
+    func returnSettingInfoArr(_ section: Int) -> [Setting] {
+        return storage[section] ?? []
+    }
+}

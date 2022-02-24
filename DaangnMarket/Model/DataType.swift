@@ -95,3 +95,11 @@ enum VLCategory: String {
     case 동네사진전 = "동네사진전"
     case 출산육아 = "출산/육아"
 }
+
+
+
+// MARK: - 나의당근View 설정 타입
+struct Setting {
+    var text: String
+    var imageString: String
+}
