@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */; };
 		D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */; };
+		D03BD4E427C729170008702A /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03BD4E227C729170008702A /* UserInfoTableViewCell.swift */; };
+		D03BD4E527C729170008702A /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03BD4E327C729170008702A /* UserInfoTableViewCell.xib */; };
+		D05DC39827C75BE900F779E9 /* UserSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05DC39627C75BE900F779E9 /* UserSettingTableViewCell.swift */; };
+		D05DC39927C75BE900F779E9 /* UserSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05DC39727C75BE900F779E9 /* UserSettingTableViewCell.xib */; };
 		D065D48127C6446600B72D81 /* VillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D065D48027C6446600B72D81 /* VillageLifeViewController.swift */; };
 		D0724E8227C6452F003D0C2B /* VillageLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */; };
 		D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */; };
@@ -34,12 +38,76 @@
 		DF7832D837D770F645344E66 /* Pods_DaangnMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D07E2C6A27C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A34157B3708EDB7D17422B3D92F591D2;
+			remoteInfo = MaterialComponents;
+		};
+		D07E2C6C27C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A2AC0B8BAC6EF061EBC28825653DF99;
+			remoteInfo = MDFInternationalization;
+		};
+		D07E2C6E27C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB8220FA4D9117310AEFC629A6EE4A08;
+			remoteInfo = MDFTextAccessibility;
+		};
+		D07E2C7027C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A16EF7F0C3BD880A50EEE557CCD2263D;
+			remoteInfo = "Pods-DaangnMarket";
+		};
+		D07E2C7627C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D03BD4E627C72AF00008702A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A34157B3708EDB7D17422B3D92F591D2;
+			remoteInfo = MaterialComponents;
+		};
+		D07E2C7827C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D03BD4E627C72AF00008702A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A2AC0B8BAC6EF061EBC28825653DF99;
+			remoteInfo = MDFInternationalization;
+		};
+		D07E2C7A27C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D03BD4E627C72AF00008702A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB8220FA4D9117310AEFC629A6EE4A08;
+			remoteInfo = MDFTextAccessibility;
+		};
+		D07E2C7C27C72C1800B105C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D03BD4E627C72AF00008702A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A16EF7F0C3BD880A50EEE557CCD2263D;
+			remoteInfo = "Pods-DaangnMarket";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1BED8793AE3F407F73385A06 /* Pods-DaangnMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		2B9E36B4204F0BDA18E1AA98 /* Pods-DaangnMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarket/Pods-DaangnMarket.release.xcconfig"; sourceTree = "<group>"; };
 		99864FFD29A9E58C0C22C577 /* Pods_DaangnMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D007BC9027C5087400CD0D3F /* WritingSalesPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSalesPostViewController.swift; sourceTree = "<group>"; };
 		D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		D03BD4E227C729170008702A /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		D03BD4E327C729170008702A /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		D03BD4E627C72AF00008702A /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D05DC39627C75BE900F779E9 /* UserSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingTableViewCell.swift; sourceTree = "<group>"; };
+		D05DC39727C75BE900F779E9 /* UserSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSettingTableViewCell.xib; sourceTree = "<group>"; };
 		D065D48027C6446600B72D81 /* VillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeViewController.swift; sourceTree = "<group>"; };
 		D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeTableViewCell.swift; sourceTree = "<group>"; };
 		D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillageLifeTableViewCell.xib; sourceTree = "<group>"; };
@@ -55,6 +123,7 @@
 		D07AE5CC27C2208A00774B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D07AE5CE27C2208A00774B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D07AE5D427C224A000774B98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D080D2CA27C5275000306E65 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D080D2CB27C5275000306E65 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D080D2CE27C528D800306E65 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +150,7 @@
 		1DF8D8CE4625AAE4A3116945 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */,
 				1BED8793AE3F407F73385A06 /* Pods-DaangnMarket.debug.xcconfig */,
 				2B9E36B4204F0BDA18E1AA98 /* Pods-DaangnMarket.release.xcconfig */,
 			);
@@ -101,6 +171,51 @@
 				D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D03BD4E027C728D70008702A /* Sales */ = {
+			isa = PBXGroup;
+			children = (
+				D0724E8427C64EC6003D0C2B /* SalesCell */,
+				D0724E8527C64FB9003D0C2B /* SalesCategoryCell */,
+			);
+			path = Sales;
+			sourceTree = "<group>";
+		};
+		D03BD4E127C728DF0008702A /* Village */ = {
+			isa = PBXGroup;
+			children = (
+				D0724E8627C64FD6003D0C2B /* VillageLifeCell */,
+				D0724E8B27C64FFA003D0C2B /* VillageLifeCategoryCell */,
+			);
+			path = Village;
+			sourceTree = "<group>";
+		};
+		D05DC38D27C75BBC00F779E9 /* UserInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				D03BD4E227C729170008702A /* UserInfoTableViewCell.swift */,
+				D03BD4E327C729170008702A /* UserInfoTableViewCell.xib */,
+			);
+			path = UserInfoCell;
+			sourceTree = "<group>";
+		};
+		D05DC39A27C75BED00F779E9 /* UserSettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				D05DC39627C75BE900F779E9 /* UserSettingTableViewCell.swift */,
+				D05DC39727C75BE900F779E9 /* UserSettingTableViewCell.xib */,
+			);
+			path = UserSettingCell;
+			sourceTree = "<group>";
+		};
+		D05DC39B27C75BFA00F779E9 /* Mydaangn */ = {
+			isa = PBXGroup;
+			children = (
+				D05DC38D27C75BBC00F779E9 /* UserInfoCell */,
+				D05DC39A27C75BED00F779E9 /* UserSettingCell */,
+			);
+			path = Mydaangn;
 			sourceTree = "<group>";
 		};
 		D0724E8427C64EC6003D0C2B /* SalesCell */ = {
@@ -152,8 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				D07AE5BF27C2208800774B98 /* DaangnMarket */,
-				D07AE5BE27C2208800774B98 /* Products */,
 				1DF8D8CE4625AAE4A3116945 /* Pods */,
+				D07AE5BE27C2208800774B98 /* Products */,
 				5138A4D125B1F463D6741196 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -179,6 +294,7 @@
 				D07AE5C927C2208A00774B98 /* Assets.xcassets */,
 				D07AE5CB27C2208A00774B98 /* LaunchScreen.storyboard */,
 				D07AE5CE27C2208A00774B98 /* Info.plist */,
+				D03BD4E627C72AF00008702A /* Pods.xcodeproj */,
 			);
 			path = DaangnMarket;
 			sourceTree = "<group>";
@@ -205,13 +321,34 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		D07E2C6227C72B3700B105C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D07E2C6B27C72C1800B105C6 /* MaterialComponents */,
+				D07E2C6D27C72C1800B105C6 /* MDFInternationalization */,
+				D07E2C6F27C72C1800B105C6 /* MDFTextAccessibility */,
+				D07E2C7127C72C1800B105C6 /* Pods-DaangnMarket */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D07E2C6427C72C1800B105C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D07E2C7727C72C1800B105C6 /* MaterialComponents */,
+				D07E2C7927C72C1800B105C6 /* MDFInternationalization */,
+				D07E2C7B27C72C1800B105C6 /* MDFTextAccessibility */,
+				D07E2C7D27C72C1800B105C6 /* Pods-DaangnMarket */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D0D484FA27C22E5A00129253 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D0724E8427C64EC6003D0C2B /* SalesCell */,
-				D0724E8527C64FB9003D0C2B /* SalesCategoryCell */,
-				D0724E8627C64FD6003D0C2B /* VillageLifeCell */,
-				D0724E8B27C64FFA003D0C2B /* VillageLifeCategoryCell */,
+				D03BD4E027C728D70008702A /* Sales */,
+				D03BD4E127C728DF0008702A /* Village */,
+				D05DC39B27C75BFA00F779E9 /* Mydaangn */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -273,6 +410,16 @@
 			mainGroup = D07AE5B427C2208800774B98;
 			productRefGroup = D07AE5BE27C2208800774B98 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D07E2C6227C72B3700B105C6 /* Products */;
+					ProjectRef = D07E2C6127C72B3700B105C6 /* Pods.xcodeproj */;
+				},
+				{
+					ProductGroup = D07E2C6427C72C1800B105C6 /* Products */;
+					ProjectRef = D03BD4E627C72AF00008702A /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D07AE5BC27C2208800774B98 /* DaangnMarket */,
@@ -280,17 +427,86 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D07E2C6B27C72C1800B105C6 /* MaterialComponents */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MaterialComponents;
+			path = MaterialComponents.framework;
+			remoteRef = D07E2C6A27C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C6D27C72C1800B105C6 /* MDFInternationalization */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MDFInternationalization;
+			path = MDFInternationalization.framework;
+			remoteRef = D07E2C6C27C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C6F27C72C1800B105C6 /* MDFTextAccessibility */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MDFTextAccessibility;
+			path = MDFTextAccessibility.framework;
+			remoteRef = D07E2C6E27C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C7127C72C1800B105C6 /* Pods-DaangnMarket */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-DaangnMarket";
+			path = Pods_DaangnMarket.framework;
+			remoteRef = D07E2C7027C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C7727C72C1800B105C6 /* MaterialComponents */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MaterialComponents;
+			path = MaterialComponents.framework;
+			remoteRef = D07E2C7627C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C7927C72C1800B105C6 /* MDFInternationalization */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MDFInternationalization;
+			path = MDFInternationalization.framework;
+			remoteRef = D07E2C7827C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C7B27C72C1800B105C6 /* MDFTextAccessibility */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = MDFTextAccessibility;
+			path = MDFTextAccessibility.framework;
+			remoteRef = D07E2C7A27C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D07E2C7D27C72C1800B105C6 /* Pods-DaangnMarket */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-DaangnMarket";
+			path = Pods_DaangnMarket.framework;
+			remoteRef = D07E2C7C27C72C1800B105C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		D07AE5BB27C2208800774B98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03BD4E527C729170008702A /* UserInfoTableViewCell.xib in Resources */,
 				D0D484F927C22E5400129253 /* SalesPostTableViewCell.xib in Resources */,
 				D080D2CD27C5275000306E65 /* CategoryTableViewCell.xib in Resources */,
 				D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */,
 				D07AE5CD27C2208A00774B98 /* LaunchScreen.storyboard in Resources */,
 				D07AE5CA27C2208A00774B98 /* Assets.xcassets in Resources */,
 				D0724E8A27C64FF4003D0C2B /* VLCategoryTableViewCell.xib in Resources */,
+				D05DC39927C75BE900F779E9 /* UserSettingTableViewCell.xib in Resources */,
 				D07AE5C827C2208800774B98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,11 +572,13 @@
 				D0EDAB2C27C3C0D30082A82D /* MainTableViewCell.swift in Sources */,
 				D07AE5C327C2208800774B98 /* SceneDelegate.swift in Sources */,
 				D0D484F827C22E5400129253 /* SalesPostTableViewCell.swift in Sources */,
+				D03BD4E427C729170008702A /* UserInfoTableViewCell.swift in Sources */,
 				D0C9D96027C37ECC009CCE62 /* MyDaangnViewController.swift in Sources */,
 				D07AE5D527C224A000774B98 /* MainViewController.swift in Sources */,
 				D0C9D95E27C37E64009CCE62 /* DataType.swift in Sources */,
 				D080D2CC27C5275000306E65 /* CategoryTableViewCell.swift in Sources */,
 				D00FC3FC27C49D800041A7E6 /* SalesPostCollectionViewCell.swift in Sources */,
+				D05DC39827C75BE900F779E9 /* UserSettingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MaterialComponents.MaterialButtons
 
 class VillageLifeViewController: MainViewController {
     
@@ -35,7 +36,30 @@ class VillageLifeViewController: MainViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        setFloatingButton()
     }
+    
+    
+    
+    // MARK: - 플러팅 버튼 함수
+    func setFloatingButton() {
+        let floatingButton = MDCFloatingButton()
+        let image = UIImage(systemName: "applepencil")
+//        let image = UIImage(named: "공감하기.jpeg")
+        floatingButton.sizeToFit()
+        floatingButton.translatesAutoresizingMaskIntoConstraints = false
+        floatingButton.setImage(image, for: .normal)
+        floatingButton.setImageTintColor(.white, for: .normal)
+        floatingButton.backgroundColor = UIColor(red: 255/255, green: 173/255, blue: 57/255, alpha: 1)
+        floatingButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        view.addSubview(floatingButton)
+        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -100))
+        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: -20))
+        }
+    
+    
 }
 
 
@@ -64,4 +88,9 @@ extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     
+    
+    // MARK: - 플로팅 버튼 함수
+    @objc func tap(_ sender: Any) {
+        print("동네생활 글쓰기 버튼 눌림")
+    }
 }

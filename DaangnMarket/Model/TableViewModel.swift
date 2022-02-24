@@ -129,7 +129,7 @@ class VillageLiftPostModel {
             VillageLifePost(writer: userModel.returnUserInfo("노구트"), content: "베란다에 세탁기 연결하는 수전 온수에 물이 새는데요.. 봐주실분 계신가요ㅠㅠ 밤이라 철물점에도 못하겠고 도와주실분..", imageString: nil, category: .해주세요, identifier: 5),
             VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "마북동 음쓰 수거일이 월, 수로 알고있는데 혹시 바뀌었나용?", imageString: nil, category: .동네질문, identifier: 6),
             VillageLifePost(writer: userModel.returnUserInfo("비움"), content: "여성 탈모 피부과 좋은 곳 있을까요~~~? 가격 착하고 효과보신곳 있으시면 추천 부탁해용~~", imageString: nil, category: .동네질문, identifier: 7),
-            VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "안녕하십니까.. 기흥구에 사는 40대 후반 직장인입니다.. 건강을 위해 걷기, 등산을 같이 하실분 계실까 해서 올려봅니다...", imageString: nil, category: .취미생활, identifier: 8),
+            VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "안녕하십니까.. 기흥구에 사는 40대 후반 직장인 이웃입니다.. 건강을 위해 걷기, 등산을 같이 하실분 계실까 해서 올려봅니다...\n\n용인 주변 산뿐만 아니라, 서울권역 산도 가끔 다닙니다.\n직장인이라 주로, 주말에 다닙니다.\n\n혼자서 다녔지만, 서로 시간될떄 함께 할 분들이 계셨으면 더 좋을듯해서 글 올립니다.", imageString: nil, category: .취미생활, identifier: 8),
             VillageLifePost(writer: userModel.returnUserInfo("당근마"), content: "노터치 자동세차 기흥역 근처에 있나요? 아는곳 있으시면 추천 부탁드려요", imageString: nil, category: .동네질문, identifier: 9)
         ]
     }

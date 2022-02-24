@@ -1636,24 +1636,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에이든" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIb-jy-6sh">
-                                <rect key="frame" x="184.5" y="438" width="45" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVO-Bh-psg" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-gn-jbl" userLabel="bell View">
+                                        <rect key="frame" x="375" y="11.5" width="29" height="29"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="설정 아이콘2" translatesAutoresizingMaskIntoConstraints="NO" id="s7Q-wb-iWw">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="s7Q-wb-iWw" secondAttribute="bottom" id="6wJ-M0-M0U"/>
+                                            <constraint firstAttribute="trailing" secondItem="s7Q-wb-iWw" secondAttribute="trailing" id="80p-5f-Hpt"/>
+                                            <constraint firstAttribute="width" secondItem="aN8-gn-jbl" secondAttribute="height" multiplier="1:1" id="SbY-e3-fFP"/>
+                                            <constraint firstItem="s7Q-wb-iWw" firstAttribute="leading" secondItem="aN8-gn-jbl" secondAttribute="leading" id="k3q-Lz-XFl"/>
+                                            <constraint firstItem="s7Q-wb-iWw" firstAttribute="top" secondItem="aN8-gn-jbl" secondAttribute="top" id="q5G-GK-rHU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2Y-os-5m6" userLabel="동네선택 View">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 당근" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-Hv-x2i">
+                                                <rect key="frame" x="15" y="12.5" width="81" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PSO-Hv-x2i" firstAttribute="leading" secondItem="a2Y-os-5m6" secondAttribute="leading" constant="15" id="1vD-dH-iRa"/>
+                                            <constraint firstItem="PSO-Hv-x2i" firstAttribute="centerY" secondItem="a2Y-os-5m6" secondAttribute="centerY" id="xtk-3z-vxb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-BB-xgt" userLabel="실선">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="eCc-sI-CG8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="height" multiplier="8:1" id="32l-n3-BoO"/>
+                                    <constraint firstAttribute="trailing" secondItem="QcA-BB-xgt" secondAttribute="trailing" id="DU9-Og-2Ek"/>
+                                    <constraint firstItem="a2Y-os-5m6" firstAttribute="leading" secondItem="fVO-Bh-psg" secondAttribute="leading" id="PYP-kN-IHD"/>
+                                    <constraint firstItem="QcA-BB-xgt" firstAttribute="leading" secondItem="fVO-Bh-psg" secondAttribute="leading" id="SFp-ga-bJM"/>
+                                    <constraint firstAttribute="trailing" secondItem="aN8-gn-jbl" secondAttribute="trailing" constant="10" id="SMG-CD-PfB"/>
+                                    <constraint firstItem="a2Y-os-5m6" firstAttribute="height" secondItem="fVO-Bh-psg" secondAttribute="height" id="TNy-Sg-lpq"/>
+                                    <constraint firstItem="a2Y-os-5m6" firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="width" multiplier="0.4" id="UwG-x0-9Jz"/>
+                                    <constraint firstItem="a2Y-os-5m6" firstAttribute="centerY" secondItem="fVO-Bh-psg" secondAttribute="centerY" id="kX9-Tg-pFr"/>
+                                    <constraint firstItem="aN8-gn-jbl" firstAttribute="centerY" secondItem="fVO-Bh-psg" secondAttribute="centerY" id="opd-iO-B6i"/>
+                                    <constraint firstAttribute="bottom" secondItem="QcA-BB-xgt" secondAttribute="bottom" id="wXG-hI-IbN"/>
+                                    <constraint firstItem="aN8-gn-jbl" firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="width" multiplier="0.07" id="yW3-29-aGn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-r2-c5t">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wGE-AY-2zp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VIb-jy-6sh" firstAttribute="centerY" secondItem="bbD-Zk-eeQ" secondAttribute="centerY" id="VZV-zB-JIM"/>
-                            <constraint firstItem="VIb-jy-6sh" firstAttribute="centerX" secondItem="bbD-Zk-eeQ" secondAttribute="centerX" id="wLT-57-1hY"/>
+                            <constraint firstItem="fVO-Bh-psg" firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="height" multiplier="8:1" id="0Ll-Ay-Gba"/>
+                            <constraint firstItem="fVO-Bh-psg" firstAttribute="trailing" secondItem="wGE-AY-2zp" secondAttribute="trailing" id="8Jd-ei-Eb8"/>
+                            <constraint firstItem="wGE-AY-2zp" firstAttribute="leading" secondItem="fVO-Bh-psg" secondAttribute="leading" id="8hp-Jn-ga5"/>
+                            <constraint firstItem="wGE-AY-2zp" firstAttribute="bottom" secondItem="Trv-r2-c5t" secondAttribute="bottom" id="CDN-pz-Q3O"/>
+                            <constraint firstItem="Trv-r2-c5t" firstAttribute="top" secondItem="fVO-Bh-psg" secondAttribute="bottom" id="YSX-cY-iVB"/>
+                            <constraint firstItem="Trv-r2-c5t" firstAttribute="leading" secondItem="wGE-AY-2zp" secondAttribute="leading" id="ccx-Xo-u2W"/>
+                            <constraint firstItem="wGE-AY-2zp" firstAttribute="trailing" secondItem="Trv-r2-c5t" secondAttribute="trailing" id="jpK-kC-br7"/>
+                            <constraint firstItem="fVO-Bh-psg" firstAttribute="top" secondItem="wGE-AY-2zp" secondAttribute="top" id="omN-uA-2Ge"/>
+                            <constraint firstItem="fVO-Bh-psg" firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="height" multiplier="8:1" id="uku-ax-iUb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="나의 당근" image="person" catalog="system" selectedImage="person.fill" id="v5Z-D1-TpJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="userNickName" destination="VIb-jy-6sh" id="9ge-wH-WfO"/>
+                        <outlet property="tableView" destination="Trv-r2-c5t" id="Bp9-FE-jDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abc-Fm-oV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1749,6 +1812,7 @@
         <image name="노란에너지" width="700" height="92"/>
         <image name="노란온도" width="292" height="224"/>
         <image name="사진업로드" width="200" height="198"/>
+        <image name="설정 아이콘2" width="512" height="512"/>
         <image name="시계" width="486" height="367"/>
         <image name="아래로 아이콘" width="89" height="85"/>
         <image name="안경" width="468" height="355"/>
