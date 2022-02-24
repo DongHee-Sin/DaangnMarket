@@ -1443,6 +1443,7 @@
                         <outlet property="postPrice" destination="lG8-Rv-4Ch" id="07H-Tn-RQX"/>
                         <outlet property="postTitle" destination="Nnm-5D-Jqi" id="i6g-YR-7aT"/>
                         <outlet property="productImage" destination="evi-fJ-0WP" id="zJA-ie-En9"/>
+                        <outlet property="profileImage" destination="smv-l7-KC0" id="pbS-cI-Dqz"/>
                         <outlet property="temperature" destination="A40-sF-nUP" id="lMp-OM-4qu"/>
                         <outlet property="toChattingButton" destination="JEP-c1-vlP" id="Nka-dq-K0r"/>
                     </connections>
@@ -1614,15 +1615,113 @@
         <!--채팅-->
         <scene sceneID="tWh-lB-bIJ">
             <objects>
-                <viewController id="X7Y-3y-tvM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChattingViewController" id="X7Y-3y-tvM" customClass="ChattingViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qjm-po-sXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0l-Xf-WPN" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-I7-pDy" userLabel="bell View">
+                                        <rect key="frame" x="375" y="11.5" width="29" height="29"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GRW-LX-jgK">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="28.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="GRW-LX-jgK" firstAttribute="top" secondItem="Re1-I7-pDy" secondAttribute="top" id="4pX-Rf-a17"/>
+                                            <constraint firstItem="GRW-LX-jgK" firstAttribute="leading" secondItem="Re1-I7-pDy" secondAttribute="leading" id="VZS-lY-aEJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="GRW-LX-jgK" secondAttribute="bottom" id="ZwY-47-22c"/>
+                                            <constraint firstAttribute="trailing" secondItem="GRW-LX-jgK" secondAttribute="trailing" id="oSi-Gu-VAt"/>
+                                            <constraint firstAttribute="width" secondItem="Re1-I7-pDy" secondAttribute="height" multiplier="1:1" id="v7A-oa-76B"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-st-c34" userLabel="list View">
+                                        <rect key="frame" x="336" y="11.5" width="29" height="29"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mhF-6L-5CC">
+                                                <rect key="frame" x="0.0" y="0.5" width="29" height="27.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mhF-6L-5CC" firstAttribute="top" secondItem="WFT-st-c34" secondAttribute="top" id="WE7-vm-0PS"/>
+                                            <constraint firstItem="mhF-6L-5CC" firstAttribute="leading" secondItem="WFT-st-c34" secondAttribute="leading" id="efI-0Z-B2Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="mhF-6L-5CC" secondAttribute="trailing" id="rAn-dU-QJP"/>
+                                            <constraint firstAttribute="bottom" secondItem="mhF-6L-5CC" secondAttribute="bottom" id="wKL-06-fq0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXL-VR-FCD" userLabel="동네선택 View">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Be-Z8-60u">
+                                                <rect key="frame" x="15" y="12.5" width="38.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6Be-Z8-60u" firstAttribute="centerY" secondItem="iXL-VR-FCD" secondAttribute="centerY" id="Pi3-rE-SlM"/>
+                                            <constraint firstItem="6Be-Z8-60u" firstAttribute="leading" secondItem="iXL-VR-FCD" secondAttribute="leading" constant="15" id="px2-g9-yMb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agM-jH-QHM" userLabel="실선">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="n4a-e0-ekM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Re1-I7-pDy" firstAttribute="centerY" secondItem="h0l-Xf-WPN" secondAttribute="centerY" id="5mh-Pa-36c"/>
+                                    <constraint firstItem="iXL-VR-FCD" firstAttribute="height" secondItem="h0l-Xf-WPN" secondAttribute="height" id="CIi-mY-1hg"/>
+                                    <constraint firstItem="Re1-I7-pDy" firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="width" multiplier="0.07" id="CPX-tE-LrJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="agM-jH-QHM" secondAttribute="trailing" id="H0f-xS-GaJ"/>
+                                    <constraint firstItem="agM-jH-QHM" firstAttribute="leading" secondItem="h0l-Xf-WPN" secondAttribute="leading" id="MM9-hw-ksj"/>
+                                    <constraint firstItem="WFT-st-c34" firstAttribute="width" secondItem="WFT-st-c34" secondAttribute="height" multiplier="1:1" id="Q2m-1W-D8g"/>
+                                    <constraint firstItem="Re1-I7-pDy" firstAttribute="leading" secondItem="WFT-st-c34" secondAttribute="trailing" constant="10" id="R31-x6-KvH"/>
+                                    <constraint firstItem="iXL-VR-FCD" firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="width" multiplier="0.4" id="Ra5-am-g2d"/>
+                                    <constraint firstItem="iXL-VR-FCD" firstAttribute="centerY" secondItem="h0l-Xf-WPN" secondAttribute="centerY" id="XsG-54-O7D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Re1-I7-pDy" secondAttribute="trailing" constant="10" id="bQ9-Bp-10T"/>
+                                    <constraint firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="height" multiplier="8:1" id="cmM-of-q8e"/>
+                                    <constraint firstAttribute="bottom" secondItem="agM-jH-QHM" secondAttribute="bottom" id="dnN-0g-DJE"/>
+                                    <constraint firstItem="WFT-st-c34" firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="width" multiplier="0.07" id="x4e-gm-vor"/>
+                                    <constraint firstItem="iXL-VR-FCD" firstAttribute="leading" secondItem="h0l-Xf-WPN" secondAttribute="leading" id="zVw-qc-0us"/>
+                                    <constraint firstItem="WFT-st-c34" firstAttribute="centerY" secondItem="Re1-I7-pDy" secondAttribute="centerY" id="zp8-fh-lFF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-VH-Pf1">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Bo-Sh-JhH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h0l-Xf-WPN" firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="height" multiplier="8:1" id="807-gk-Os7"/>
+                            <constraint firstItem="tLf-VH-Pf1" firstAttribute="leading" secondItem="6Bo-Sh-JhH" secondAttribute="leading" id="9FQ-Uu-W2f"/>
+                            <constraint firstItem="6Bo-Sh-JhH" firstAttribute="bottom" secondItem="tLf-VH-Pf1" secondAttribute="bottom" id="Dac-Lu-eYb"/>
+                            <constraint firstItem="h0l-Xf-WPN" firstAttribute="top" secondItem="6Bo-Sh-JhH" secondAttribute="top" id="Dz9-gr-voK"/>
+                            <constraint firstItem="6Bo-Sh-JhH" firstAttribute="leading" secondItem="h0l-Xf-WPN" secondAttribute="leading" id="J6h-Yw-CaO"/>
+                            <constraint firstItem="tLf-VH-Pf1" firstAttribute="top" secondItem="h0l-Xf-WPN" secondAttribute="bottom" id="R20-6t-tjW"/>
+                            <constraint firstItem="6Bo-Sh-JhH" firstAttribute="trailing" secondItem="tLf-VH-Pf1" secondAttribute="trailing" id="bjN-q2-eHo"/>
+                            <constraint firstItem="h0l-Xf-WPN" firstAttribute="width" secondItem="h0l-Xf-WPN" secondAttribute="height" multiplier="8:1" id="c34-zp-BbO"/>
+                            <constraint firstItem="h0l-Xf-WPN" firstAttribute="trailing" secondItem="6Bo-Sh-JhH" secondAttribute="trailing" id="hHF-bH-hrK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="채팅" image="bubble.right" catalog="system" selectedImage="bubble.right.fill" id="sxr-sJ-Pm2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="tLf-VH-Pf1" id="n8A-ex-Tf4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubc-E9-Ava" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1694,9 +1793,8 @@
                                     <constraint firstItem="aN8-gn-jbl" firstAttribute="width" secondItem="fVO-Bh-psg" secondAttribute="width" multiplier="0.07" id="yW3-29-aGn"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-r2-c5t">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-r2-c5t">
                                 <rect key="frame" x="0.0" y="96" width="414" height="717"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wGE-AY-2zp"/>
@@ -1802,6 +1900,7 @@
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <image name="userIcon" width="229" height="236"/>

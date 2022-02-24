@@ -13,6 +13,7 @@ struct User {
     var nickName: String
     var address: String
     var mannerScore: Float
+    var profileImage: String?
 }
 
 
@@ -100,6 +101,17 @@ enum VLCategory: String {
 
 // MARK: - 나의당근View 설정 타입
 struct Setting {
-    var text: String
-    var imageString: String
+    let text: String
+    let imageString: String
+}
+
+
+
+
+// MARK: - Chatting 타입
+struct Chatting {
+    let connectedUser: User
+    let productImage: String?
+    var lastChat: String
+    var lastChatDate: String
 }

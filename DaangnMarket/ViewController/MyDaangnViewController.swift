@@ -9,7 +9,7 @@ import UIKit
 
 class MyDaangnViewController: MainViewController {
     
-    // 사용중인 유저 이름
+    // 사용중인 유저 닉네임
     var userStringName: String = "에이든"
     
     
@@ -51,9 +51,9 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     // 섹션 헤더 높이?
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
-    }
+//    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+//        return 10.0
+//    }
     
     
     // 각 섹션별로 셀이 몇개 들어가는지?
@@ -82,4 +82,29 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    
+    
+    // 스택오버플로
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // if it's the 3rd section, return a view with desired content for the section header
+        if section > 0 {
+            let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 10))
+            v.backgroundColor = .systemGray5
+//            let label = UILabel(frame: CGRect(x: 8.0, y: 4.0, width: v.bounds.size.width - 16.0, height: v.bounds.size.height - 8.0))
+//            label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            label.text = "Header for Third Section"
+//            v.addSubview(label)
+            return v
+        }
+        // not the 3rd section, so don't return a view
+        return nil
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        // if it's the 3rd section
+        if section > 0 {
+            return 10
+        }
+        return 0
+    }
 }

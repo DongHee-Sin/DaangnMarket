@@ -161,6 +161,11 @@ class SalesPostViewController: MainViewController {
     @IBOutlet weak var chattingInterestingChecking: UILabel!
     
     
+    // 프로필 이미지
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    
+    
     
     // "이 글과 함께 봤어요" 스택뷰 이미지
     @IBOutlet weak var image1: UIImageView!
@@ -184,13 +189,19 @@ class SalesPostViewController: MainViewController {
     
     // MARK: - UI 업데이트 함수
     func updatePost(_ data: SalesPost) {
+        // 상품 이미지
         if data.imageString == "기본이미지.jpeg" {
             productImage.isHidden = true
         }else {
             productImage.image = UIImage(named: data.imageString)
         }
+        
+        // 유저 닉네임, 주소, 프로필 이미지
         nickName.text = data.writer.nickName
         address.text = data.writer.address
+        profileImage.image = data.writer.profileImage == nil ? UIImage(named: "userIcon.jpeg") : UIImage(named: data.writer.profileImage!)
+        
+        // 매너온도
         if data.writer.mannerScore >= 40 {
             mannerScore.text = String(data.writer.mannerScore)
             mannerScore.textColor = UIColor(red: 255/255, green: 173/255, blue: 57/255, alpha: 1)
@@ -200,6 +211,8 @@ class SalesPostViewController: MainViewController {
             mannerScore.textColor = UIColor(red: 15/255, green: 96/255, blue: 163/255, alpha: 1)
             setMannerImage("파란")
         }
+        
+        // 글 정보 (제목, 카테고리, 내용, 가격)
         postTitle.text = data.title
         postCategory.text = data.category.rawValue
         postContent.text = data.content

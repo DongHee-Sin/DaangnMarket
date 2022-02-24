@@ -15,11 +15,18 @@ class UserModel {
     
     init() {
         storage = [
-            "에이든": User(nickName: "에이든", address: "청덕동", mannerScore: 43.7),
+            "에이든": User(nickName: "에이든", address: "청덕동", mannerScore: 43.7, profileImage: "프로필3.jpeg"),
             "당근마": User(nickName: "당근마", address: "마북동", mannerScore: 39.1),
-            "비움": User(nickName: "비움", address: "동백동", mannerScore: 36.7),
-            "노구트": User(nickName: "노구트", address: "마북동", mannerScore: 41.2),
-            "인기제품": User(nickName: "인기제품", address: "중동", mannerScore: 42.0)
+            "비움": User(nickName: "비움", address: "동백동", mannerScore: 36.7, profileImage: "프로필2.jpeg"),
+            "노구트": User(nickName: "노구트", address: "마북동", mannerScore: 41.2, profileImage: "프로필5.jpeg"),
+            "인기제품": User(nickName: "인기제품", address: "중동", mannerScore: 42.0, profileImage: "프로필1.jpeg"),
+            "문도": User(nickName: "문도", address: "정글동", mannerScore: 27.1),
+            "티모": User(nickName: "티모", address: "탑동", mannerScore: 49.1),
+            "리신": User(nickName: "리신", address: "정글동", mannerScore: 65.2),
+            "제이스": User(nickName: "제이스", address: "미드동", mannerScore: 34.4),
+            "소나": User(nickName: "소나", address: "바텀동", mannerScore: 34.4, profileImage: "프로필4.jpeg"),
+            "이즈": User(nickName: "이즈", address: "바텀동", mannerScore: 34.4),
+            "미달드려": User(nickName: "미달드려", address: "중동", mannerScore: 34.4),
         ]
     }
     
@@ -192,5 +199,42 @@ class SettingModel {
     
     func returnSettingInfoArr(_ section: Int) -> [Setting] {
         return storage[section] ?? []
+    }
+}
+
+
+
+
+class ChattingModel {
+    private var storage: [Chatting] = []
+    
+
+    // 유저정보 넣으려고 가져온 변수
+    private let userModel: UserModel = UserModel()
+    
+    
+    init() {
+        storage = [
+            Chatting(connectedUser: userModel.returnUserInfo("노구트"), productImage: "키보드.jpg", lastChat: "네 감사합니다~", lastChatDate: "1주 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("리신"), productImage: nil, lastChat: "문자로 보냈습니다.", lastChatDate: "4주 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("제이스"), productImage: "청소기.jpg", lastChat: "어디쪽에 계세요?", lastChatDate: "4주 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("당근마"), productImage: nil, lastChat: "넵", lastChatDate: "1달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("비움"), productImage: "바람막이.jpg", lastChat: "네 알겠습니다!", lastChatDate: "1달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("인기제품"), productImage: "게이밍의자.jpg", lastChat: "지금 내려갈게요!", lastChatDate: "2달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("문도"), productImage: nil, lastChat: "지금 갑니다.", lastChatDate: "2달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("미달드려"), productImage: nil, lastChat: "달려갑니다.", lastChatDate: "3달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("소나"), productImage: nil, lastChat: "네네~", lastChatDate: "4달 전"),
+            Chatting(connectedUser: userModel.returnUserInfo("이즈"), productImage: nil, lastChat: "잘 쓸게요.", lastChatDate: "5달 전")
+        ]
+    }
+    
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    
+    func returnChattingInfo(_ index: Int) -> Chatting {
+        return storage[index]
     }
 }
