@@ -17,7 +17,7 @@ struct User {
 
 
 
-// MARK: - 게시글 타입
+// MARK: - 판매 게시글 타입
 struct SalesPost {
     let writer: User
     var title: String
@@ -62,5 +62,36 @@ enum ProductCategory: String, CaseIterable {
 enum HeaderText: String {
     case 거래추가 = "중고거래 글쓰기"
     case 거래수정 = "중고거래 글 수정하기"
+    case 동네추가 = "동네생활 글쓰기"
+    case 동네수정 = "동네생활 글 수정하기"
 }
 
+
+
+
+
+
+// MARK: - 동네생활 글 타입
+struct VillageLifePost {
+    let writer: User
+    var content: String
+    var imageString: String?
+    var category: VLCategory
+    var identifier: Int
+}
+
+
+// MARK: - 동네생활 글 카테고리
+enum VLCategory: String {
+    case 동네질문 = "동네질문"
+    case 동네맛집 = "동네맛집"
+    case 동네소식 = "동네소식"
+    case 취미생활 = "취미생활"
+    case 분실실종센터 = "분실/실종센터"
+    case 동네사건사고 = "동네사건사고"
+    case 해주세요 = "해주세요"
+    case 인테리어 = "인테리어"
+    case 교육학원 = "교육/학원"
+    case 동네사진전 = "동네사진전"
+    case 출산육아 = "출산/육아"
+}

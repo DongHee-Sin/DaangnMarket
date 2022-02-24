@@ -104,3 +104,43 @@ class SalesPostModel {
         storage.remove(at: targetIndex!)
     }
 }
+
+
+
+
+
+
+// MARK: - 동네생활 글 모델
+class VillageLiftPostModel {
+    private var storage: [VillageLifePost] = []
+    
+    
+    // 유저정보 넣으려고 가져온 변수
+    private let userModel: UserModel = UserModel()
+    
+    
+    init() {
+        storage = [
+            VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "혹시 언남동 근처에서 가방수선하는곳 아시는분 계실까요? 옷수선뿐이 없어서요..", imageString: nil, category: .동네질문, identifier: 0),
+            VillageLifePost(writer: userModel.returnUserInfo("당근마"), content: "좋은정보같아서~ 공유합니다^^ 자동차탄소포인트제라고 최대 10만원까지 환급 가능하다고 해요~ 저는 아침에 신청했어요~^^", imageString: "자동차 탄소.jpeg", category: .동네소식, identifier: 1),
+            VillageLifePost(writer: userModel.returnUserInfo("비움"), content: "5세 아이 함께 케이팝 배우실분 연락 주세요 저번에 오마이걸 배웠는데 곧잘 따라하더라구요 다른곡도 하고싶은데 개인강습은 좀 비싸서..", imageString: nil, category: .교육학원, identifier: 2),
+            VillageLifePost(writer: userModel.returnUserInfo("노구트"), content: "초당고에 일진 많이 있나요?", imageString: nil, category: .동네질문, identifier: 3),
+            VillageLifePost(writer: userModel.returnUserInfo("인기제품"), content: "칼리바를 배울 수 있는 가까운곳.. 방법이 있을까요?", imageString: nil, category: .취미생활, identifier: 4),
+            VillageLifePost(writer: userModel.returnUserInfo("노구트"), content: "베란다에 세탁기 연결하는 수전 온수에 물이 새는데요.. 봐주실분 계신가요ㅠㅠ 밤이라 철물점에도 못하겠고 도와주실분..", imageString: nil, category: .해주세요, identifier: 5),
+            VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "마북동 음쓰 수거일이 월, 수로 알고있는데 혹시 바뀌었나용?", imageString: nil, category: .동네질문, identifier: 6),
+            VillageLifePost(writer: userModel.returnUserInfo("비움"), content: "여성 탈모 피부과 좋은 곳 있을까요~~~? 가격 착하고 효과보신곳 있으시면 추천 부탁해용~~", imageString: nil, category: .동네질문, identifier: 7),
+            VillageLifePost(writer: userModel.returnUserInfo("에이든"), content: "안녕하십니까.. 기흥구에 사는 40대 후반 직장인입니다.. 건강을 위해 걷기, 등산을 같이 하실분 계실까 해서 올려봅니다...", imageString: nil, category: .취미생활, identifier: 8),
+            VillageLifePost(writer: userModel.returnUserInfo("당근마"), content: "노터치 자동세차 기흥역 근처에 있나요? 아는곳 있으시면 추천 부탁드려요", imageString: nil, category: .동네질문, identifier: 9)
+        ]
+    }
+    
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    
+    func returnPostInfo(_ index: Int) -> VillageLifePost {
+        return storage[index]
+    }
+}

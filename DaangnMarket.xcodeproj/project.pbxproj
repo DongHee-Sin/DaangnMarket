@@ -12,6 +12,8 @@
 		D065D48127C6446600B72D81 /* VillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D065D48027C6446600B72D81 /* VillageLifeViewController.swift */; };
 		D0724E8227C6452F003D0C2B /* VillageLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */; };
 		D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */; };
+		D0724E8927C64FF4003D0C2B /* VLCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724E8727C64FF4003D0C2B /* VLCategoryTableViewCell.swift */; };
+		D0724E8A27C64FF4003D0C2B /* VLCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0724E8827C64FF4003D0C2B /* VLCategoryTableViewCell.xib */; };
 		D07619D627C3584500AFDEDC /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07619D527C3584500AFDEDC /* TableViewModel.swift */; };
 		D07AE5C127C2208800774B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C027C2208800774B98 /* AppDelegate.swift */; };
 		D07AE5C327C2208800774B98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AE5C227C2208800774B98 /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		D065D48027C6446600B72D81 /* VillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeViewController.swift; sourceTree = "<group>"; };
 		D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeTableViewCell.swift; sourceTree = "<group>"; };
 		D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillageLifeTableViewCell.xib; sourceTree = "<group>"; };
+		D0724E8727C64FF4003D0C2B /* VLCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		D0724E8827C64FF4003D0C2B /* VLCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VLCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D07619D527C3584500AFDEDC /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D07AE5BD27C2208800774B98 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07AE5C027C2208800774B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,42 @@
 				D00FC3FB27C49D800041A7E6 /* SalesPostCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D0724E8427C64EC6003D0C2B /* SalesCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0D484F627C22E5400129253 /* SalesPostTableViewCell.swift */,
+				D0D484F727C22E5400129253 /* SalesPostTableViewCell.xib */,
+			);
+			path = SalesCell;
+			sourceTree = "<group>";
+		};
+		D0724E8527C64FB9003D0C2B /* SalesCategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				D080D2CA27C5275000306E65 /* CategoryTableViewCell.swift */,
+				D080D2CB27C5275000306E65 /* CategoryTableViewCell.xib */,
+			);
+			path = SalesCategoryCell;
+			sourceTree = "<group>";
+		};
+		D0724E8627C64FD6003D0C2B /* VillageLifeCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */,
+				D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */,
+			);
+			path = VillageLifeCell;
+			sourceTree = "<group>";
+		};
+		D0724E8B27C64FFA003D0C2B /* VillageLifeCategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0724E8727C64FF4003D0C2B /* VLCategoryTableViewCell.swift */,
+				D0724E8827C64FF4003D0C2B /* VLCategoryTableViewCell.xib */,
+			);
+			path = VillageLifeCategoryCell;
 			sourceTree = "<group>";
 		};
 		D07619D727C35A0A00AFDEDC /* Model */ = {
@@ -168,12 +208,10 @@
 		D0D484FA27C22E5A00129253 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D0D484F627C22E5400129253 /* SalesPostTableViewCell.swift */,
-				D0D484F727C22E5400129253 /* SalesPostTableViewCell.xib */,
-				D080D2CA27C5275000306E65 /* CategoryTableViewCell.swift */,
-				D080D2CB27C5275000306E65 /* CategoryTableViewCell.xib */,
-				D0724E8027C6452F003D0C2B /* VillageLifeTableViewCell.swift */,
-				D0724E8127C6452F003D0C2B /* VillageLifeTableViewCell.xib */,
+				D0724E8427C64EC6003D0C2B /* SalesCell */,
+				D0724E8527C64FB9003D0C2B /* SalesCategoryCell */,
+				D0724E8627C64FD6003D0C2B /* VillageLifeCell */,
+				D0724E8B27C64FFA003D0C2B /* VillageLifeCategoryCell */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -252,6 +290,7 @@
 				D0724E8327C6452F003D0C2B /* VillageLifeTableViewCell.xib in Resources */,
 				D07AE5CD27C2208A00774B98 /* LaunchScreen.storyboard in Resources */,
 				D07AE5CA27C2208A00774B98 /* Assets.xcassets in Resources */,
+				D0724E8A27C64FF4003D0C2B /* VLCategoryTableViewCell.xib in Resources */,
 				D07AE5C827C2208800774B98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0724E8227C6452F003D0C2B /* VillageLifeTableViewCell.swift in Sources */,
+				D0724E8927C64FF4003D0C2B /* VLCategoryTableViewCell.swift in Sources */,
 				D065D48127C6446600B72D81 /* VillageLifeViewController.swift in Sources */,
 				D007BC9127C5087400CD0D3F /* WritingSalesPostViewController.swift in Sources */,
 				D0EAC77127C3BC8F005DB956 /* SalesPostViewController.swift in Sources */,
