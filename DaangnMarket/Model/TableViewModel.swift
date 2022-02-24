@@ -84,6 +84,25 @@ class SalesPostModel {
         storage[targetIndex!].viewCount += 1
     }
     
+    
+    // 관심 count 조절
+    enum chooseOperator {
+        case plus
+        case minus
+    }
+    func calculatInterestCount(_ identifier: Int, choose: chooseOperator) {
+        let targetIndex = storage.firstIndex(where: {
+            $0.identifier == identifier
+        })
+        if choose == .plus {
+            storage[targetIndex!].interestCount += 1
+        }else {
+            storage[targetIndex!].interestCount -= 1
+        }
+    }
+    
+    
+    
     // 글 작성
     func addPost(writer: String, title: String, content: String, category: ProductCategory, price: Int? = nil) {
 

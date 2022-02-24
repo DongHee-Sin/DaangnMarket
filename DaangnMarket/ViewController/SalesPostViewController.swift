@@ -165,6 +165,29 @@ class SalesPostViewController: MainViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     
+    // 관심버튼 (하트)
+    @IBOutlet weak var heartImage: UIImageView!
+    var interested: Bool = false
+    @IBAction func didTouchedHeartButton(_ sender: Any) {
+        if interested == false {
+            heartImage.tintColor = UIColor.systemOrange
+            heartImage.image = UIImage(systemName: "heart.fill")
+            mainVC?.tableViewModel.calculatInterestCount(receivedData!.identifier, choose: .plus)
+            mainVC?.tableView.reloadData()
+            updatePost(mainVC!.tableViewModel.returnPostInfo(receivedData!.identifier))
+            interested = true
+        }else {
+            heartImage.tintColor = UIColor.darkGray
+            heartImage.image = UIImage(systemName: "heart")
+            mainVC?.tableViewModel.calculatInterestCount(receivedData!.identifier, choose: .minus)
+            mainVC?.tableView.reloadData()
+            updatePost(mainVC!.tableViewModel.returnPostInfo(receivedData!.identifier))
+            interested = false
+        }
+    }
+    
+    
+    
     
     
     // "이 글과 함께 봤어요" 스택뷰 이미지

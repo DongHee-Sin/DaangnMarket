@@ -1340,6 +1340,14 @@
                                                     <constraint firstAttribute="width" secondItem="DXu-Mz-WPR" secondAttribute="height" multiplier="1:1" id="P8N-kV-lDk"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK6-OF-hOA">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="83"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="didTouchedHeartButton:" destination="h4h-W6-Pc6" eventType="touchUpInside" id="zCi-GR-AnD"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-Yj-bCd" userLabel="실선">
                                                 <rect key="frame" x="65" y="17" width="1" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1352,11 +1360,15 @@
                                         <constraints>
                                             <constraint firstItem="ARM-Yj-bCd" firstAttribute="height" secondItem="17G-So-iRB" secondAttribute="height" multiplier="0.6" id="7Sy-yP-tAk"/>
                                             <constraint firstAttribute="trailing" secondItem="ARM-Yj-bCd" secondAttribute="trailing" id="E56-KS-eFS"/>
+                                            <constraint firstItem="NK6-OF-hOA" firstAttribute="leading" secondItem="17G-So-iRB" secondAttribute="leading" id="FIr-QM-C1S"/>
                                             <constraint firstItem="DXu-Mz-WPR" firstAttribute="centerY" secondItem="17G-So-iRB" secondAttribute="centerY" id="JzR-Tc-9TY"/>
                                             <constraint firstAttribute="width" secondItem="17G-So-iRB" secondAttribute="height" multiplier="0.8:1" id="N28-S7-p9i"/>
                                             <constraint firstItem="DXu-Mz-WPR" firstAttribute="centerX" secondItem="17G-So-iRB" secondAttribute="centerX" id="dJ1-i8-p60"/>
                                             <constraint firstItem="DXu-Mz-WPR" firstAttribute="width" secondItem="17G-So-iRB" secondAttribute="width" multiplier="0.5" id="fHs-u2-T6V"/>
                                             <constraint firstItem="ARM-Yj-bCd" firstAttribute="centerY" secondItem="17G-So-iRB" secondAttribute="centerY" id="hFh-b0-BXj"/>
+                                            <constraint firstAttribute="bottom" secondItem="NK6-OF-hOA" secondAttribute="bottom" id="s5J-Mq-r1g"/>
+                                            <constraint firstAttribute="trailing" secondItem="NK6-OF-hOA" secondAttribute="trailing" id="tfM-Xy-67r"/>
+                                            <constraint firstItem="NK6-OF-hOA" firstAttribute="top" secondItem="17G-So-iRB" secondAttribute="top" id="us5-9L-Vjo"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3k-sy-VUl" userLabel="실선">
@@ -1428,6 +1440,7 @@
                     <connections>
                         <outlet property="address" destination="7il-9d-sTd" id="3V9-9W-Uyj"/>
                         <outlet property="chattingInterestingChecking" destination="Y9U-sK-QKI" id="2w1-kN-BFc"/>
+                        <outlet property="heartImage" destination="DXu-Mz-WPR" id="zm8-vp-Oaz"/>
                         <outlet property="image1" destination="zoD-Pj-EQH" id="Cfd-zW-7qo"/>
                         <outlet property="image2" destination="jWB-UL-SdP" id="Pxc-Q5-3HX"/>
                         <outlet property="image3" destination="ktJ-vb-haP" id="4iJ-9a-IAf"/>
