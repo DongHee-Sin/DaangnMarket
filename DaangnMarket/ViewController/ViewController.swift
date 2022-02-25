@@ -29,6 +29,8 @@ class ViewController: MainViewController {
         salesVC.receivedData = tableViewModel.returnPostInfo(indexPath.row)
         salesVC.mainVC = self
         
+        tabBarController?.tabBar.isHidden = true
+        
         self.navigationController?.pushViewController(salesVC, animated: true)
     }
     

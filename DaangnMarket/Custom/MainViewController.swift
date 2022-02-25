@@ -47,6 +47,12 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = size
     }
     
+    // 버튼에 border, color 추가
+    func addBorderToUIButton(_ button: UIButton, size: CGFloat, color: CGColor) {
+        button.layer.borderWidth = size
+        button.layer.borderColor = color
+    }
+    
     
     
     

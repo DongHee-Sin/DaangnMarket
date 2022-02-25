@@ -265,6 +265,16 @@ class SalesPostViewController: MainViewController {
     
     
     
+    // MARK: - View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    
+    
+    
+    
+    
     
     // MARK: - View Did Load
     override func viewDidLoad() {

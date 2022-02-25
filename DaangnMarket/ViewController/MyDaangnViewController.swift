@@ -51,9 +51,9 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     // 섹션 헤더 높이?
-//    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-//        return 10.0
-//    }
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 10.0
+    }
     
     
     // 각 섹션별로 셀이 몇개 들어가는지?

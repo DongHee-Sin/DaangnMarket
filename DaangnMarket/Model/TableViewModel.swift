@@ -257,3 +257,34 @@ class ChattingModel {
         return storage[index]
     }
 }
+
+
+
+class popularSearchKeywordModel {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            "알바",
+            "고구마",
+            "동네알바",
+            "헬스장",
+            "속눈썹펌",
+            "pt",
+            "구인",
+            "도배",
+            "캠핑카",
+            "월세",
+        ]
+    }
+    
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    
+    func returnChattingInfo(_ index: Int) -> String {
+        return storage[index]
+    }
+}
