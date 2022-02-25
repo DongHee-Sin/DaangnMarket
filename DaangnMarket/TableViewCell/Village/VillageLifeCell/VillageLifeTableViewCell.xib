@@ -20,24 +20,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8V-hx-mZd" userLabel="카테고리">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mk5-WO-ELK">
-                                <rect key="frame" x="15" y="6.5" width="59" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="동네질문">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="gray" title="동네질문">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
-                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh7-GY-gtT">
+                                <rect key="frame" x="15" y="7.5" width="51" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동네질문" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtI-eX-cK2">
+                                        <rect key="frame" x="8" y="8" width="35" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="AtI-eX-cK2" firstAttribute="leading" secondItem="Gh7-GY-gtT" secondAttribute="leading" constant="8" id="Bdj-8H-CMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="AtI-eX-cK2" secondAttribute="bottom" constant="8" id="cny-pb-R4s"/>
+                                    <constraint firstAttribute="trailing" secondItem="AtI-eX-cK2" secondAttribute="trailing" constant="8" id="gmv-g7-Tfe"/>
+                                    <constraint firstItem="AtI-eX-cK2" firstAttribute="top" secondItem="Gh7-GY-gtT" secondAttribute="top" constant="8" id="hDp-ms-nmw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mk5-WO-ELK" firstAttribute="leading" secondItem="m8V-hx-mZd" secondAttribute="leading" constant="15" id="Wpy-xr-fF5"/>
-                            <constraint firstAttribute="bottom" secondItem="Mk5-WO-ELK" secondAttribute="bottom" constant="3" id="YDe-ro-zU5"/>
                             <constraint firstAttribute="width" secondItem="m8V-hx-mZd" secondAttribute="height" multiplier="9:1" id="fJm-Wc-RhU"/>
+                            <constraint firstItem="Gh7-GY-gtT" firstAttribute="leading" secondItem="m8V-hx-mZd" secondAttribute="leading" constant="15" id="g5r-fr-7HQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Gh7-GY-gtT" secondAttribute="bottom" id="yua-Eh-WCA"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대충 내용 들어간는곳 안녕하세요 이건 냉ㅇ입니다 동네생활뷰에서 최대한 구현하기를 구현하려고합니다 플랜룩스스탠드랑 소니 헤드폰" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-Dh-jCZ">
@@ -170,6 +176,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryLabel" destination="AtI-eX-cK2" id="MQo-MQ-f2A"/>
+                <outlet property="categoryUIView" destination="Gh7-GY-gtT" id="kN1-tf-I4U"/>
                 <outlet property="contentLabel" destination="UBp-Dh-jCZ" id="HWq-tj-0Ma"/>
                 <outlet property="userNameAndAddress" destination="ynm-MG-n93" id="AfJ-CP-RXX"/>
             </connections>

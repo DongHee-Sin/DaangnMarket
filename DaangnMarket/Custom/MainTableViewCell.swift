@@ -40,5 +40,12 @@ class MainTableViewCell: UITableViewCell {
         button.layer.cornerRadius = size
     }
     
+    
+    
+    // MARK: - UIView
+    // radius
+    func addRadiusToUIView(_ view: UIView, size: CGFloat) {
+        view.layer.cornerRadius = size
+    }
 }
 

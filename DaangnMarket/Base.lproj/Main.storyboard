@@ -1718,7 +1718,7 @@
                                 <rect key="frame" x="0.0" y="96" width="414" height="717"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="som-IT-nww">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="335"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="473"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I4-2l-a83" userLabel="검색창 View">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
@@ -2224,7 +2224,34 @@
                                                     <constraint firstAttribute="bottom" secondItem="hbk-Ub-HsF" secondAttribute="bottom" constant="20" id="vZ9-GS-WKx"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-MZ-Eb2" userLabel="지도 Header">
+                                                <rect key="frame" x="0.0" y="335" width="414" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이웃과 직접 만드는 동네 지도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaK-3A-rVh">
+                                                        <rect key="frame" x="15" y="35" width="226" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OXA-MZ-Eb2" secondAttribute="height" multiplier="6:1" id="AL1-Bi-Bax"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EaK-3A-rVh" secondAttribute="bottom" constant="10" id="jaa-Ut-LhP"/>
+                                                    <constraint firstItem="EaK-3A-rVh" firstAttribute="leading" secondItem="OXA-MZ-Eb2" secondAttribute="leading" constant="15" id="w2K-Av-Zs3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrL-61-WNb" userLabel="동네맛집 겨울간식 View">
+                                                <rect key="frame" x="0.0" y="404" width="414" height="69"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TrL-61-WNb" secondAttribute="height" multiplier="6:1" id="bOa-nD-HVo"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TrL-61-WNb" firstAttribute="width" secondItem="TrL-61-WNb" secondAttribute="height" multiplier="6:1" id="ISZ-tf-aYI"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
