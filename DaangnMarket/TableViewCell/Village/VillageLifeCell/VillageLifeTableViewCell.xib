@@ -46,7 +46,7 @@
                             <constraint firstAttribute="bottom" secondItem="Gh7-GY-gtT" secondAttribute="bottom" id="yua-Eh-WCA"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대충 내용 들어간는곳 안녕하세요 이건 냉ㅇ입니다 동네생활뷰에서 최대한 구현하기를 구현하려고합니다 플랜룩스스탠드랑 소니 헤드폰" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-Dh-jCZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대충 내용 들어간는곳 안녕하세요 이건 냉ㅇ입니다 동네생활뷰에서 최대한 구현하기를 구현하려고합니다 플랜룩스스탠드랑 소니 헤드폰" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-Dh-jCZ">
                         <rect key="frame" x="15" y="45.5" width="290" height="165.5"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                         <nil key="textColor"/>
