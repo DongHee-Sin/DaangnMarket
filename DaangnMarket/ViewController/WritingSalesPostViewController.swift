@@ -75,6 +75,7 @@ class WritingSalesPostViewController: MainViewController {
             homeVC?.tableViewModel.addPost(writer: userNickName, title: titleTextField.text!, content: contentTextView.text!, category: category!, price: Int(priceTextField.text ?? "") ?? nil)
         }else {
             // 글 수정
+            tabBarController?.tabBar.isHidden = true
             homeVC?.tableViewModel.modifyPost(identifier: salesPostVC!.receivedData!.identifier, title: titleTextField.text!, content: contentTextView.text!, category: category!, price: Int(priceTextField.text ?? "") ?? nil)
             salesPostVC?.updatePost(homeVC!.tableViewModel.returnPostInfo(salesPostVC!.receivedData!.identifier))
         }

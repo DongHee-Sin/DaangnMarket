@@ -39,8 +39,12 @@ class ViewController: MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        
 
+        
+        
         
         // Delegate 지정
         tableView.delegate = self

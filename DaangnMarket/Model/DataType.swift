@@ -18,6 +18,9 @@ struct User {
 
 
 
+
+
+
 // MARK: - 판매 게시글 타입
 struct SalesPost {
     let writer: User

@@ -38,7 +38,6 @@ class SalesPostViewController: MainViewController {
         
         // 게시글 수정
         let modify = UIAlertAction(title: "게시글 수정", style: .default, handler: { (action) in
-            print("게시글 수정 버튼 눌림")
             
             guard let navigationVC = self.storyboard?.instantiateViewController(withIdentifier: "writingNavigationController") as? UINavigationController else {
                 return
@@ -73,7 +72,6 @@ class SalesPostViewController: MainViewController {
         
         // 삭제
         let delete = UIAlertAction(title: "삭제", style: .destructive, handler: { (action) in
-            print("삭제 버튼 눌림")
             self.mainVC?.tableViewModel.deletePost(self.receivedData!.identifier)
             self.mainVC?.tableView.reloadData()
             self.navigationController?.popViewController(animated: true)
@@ -140,6 +138,7 @@ class SalesPostViewController: MainViewController {
     
     // 상품 이미지
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var imageUIView: UIView!
     
     // 사용자 이름과 주소
     @IBOutlet weak var nickName: UILabel!
@@ -214,7 +213,7 @@ class SalesPostViewController: MainViewController {
     func updatePost(_ data: SalesPost) {
         // 상품 이미지
         if data.imageString == "기본이미지.jpeg" {
-            productImage.isHidden = true
+            imageUIView.isHidden = true
         }else {
             productImage.image = UIImage(named: data.imageString)
         }

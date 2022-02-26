@@ -769,7 +769,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VOG-cq-BxI">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1311.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-CA-bwX" userLabel="image">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-CA-bwX" userLabel="image View">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="게이밍의자" translatesAutoresizingMaskIntoConstraints="NO" id="evi-fJ-0WP">
@@ -1447,6 +1447,7 @@
                         <outlet property="image4" destination="eae-ze-AiO" id="Fr5-h9-Aod"/>
                         <outlet property="image5" destination="LVM-Uz-3fT" id="qom-dF-bBK"/>
                         <outlet property="image6" destination="Xfb-Hv-bYd" id="P3l-Mg-wdS"/>
+                        <outlet property="imageUIView" destination="Sam-CA-bwX" id="E9L-8W-IIA"/>
                         <outlet property="mannerEnergy" destination="Unv-qz-tqO" id="IrJ-eS-XCE"/>
                         <outlet property="mannerFace" destination="Npv-ZC-YKG" id="ogv-1K-xCA"/>
                         <outlet property="mannerScore" destination="5lv-am-TQE" id="IOk-lO-vhp"/>

@@ -9,6 +9,15 @@ import Foundation
 import UIKit
 
 
+// MARK: - 로그인 유저 정보
+//class
+
+
+
+
+
+
+
 // MARK: - User
 class UserModel {
     private var storage: [String: User] = [:]
@@ -50,6 +59,9 @@ class SalesPostModel {
     private var storage: [SalesPost] = []
     
     
+    // 저장 데이터
+    
+    
     // 유저정보 넣으려고 가져온 변수
     private let userModel: UserModel = UserModel()
     
@@ -70,9 +82,21 @@ class SalesPostModel {
     }
     
     
+    /// 메인화면에서 SalesPost로 데이터를 넘길 때
+    /// 메인화면의 tableview index를 가지고 모델에서 데이터를 꺼내오는 함수
     func returnPostInfo(_ index: Int) -> SalesPost {
         return storage[index]
     }
+    
+    
+    
+    /// UserDefault로 데이터 저장하기 위해 배열을 통째로 리턴하는 함수
+    func getStorage() -> [SalesPost] {
+        return storage
+    }
+    
+    
+    
     
     
     // 조회수 +1
