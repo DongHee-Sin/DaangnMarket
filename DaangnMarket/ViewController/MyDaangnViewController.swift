@@ -51,9 +51,9 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     // 섹션 헤더 높이?
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 10.0
-    }
+//    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+//        return 10.0
+//    }
     
     
     // 각 섹션별로 셀이 몇개 들어가는지?
@@ -64,6 +64,7 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 셀을 어떤걸로 할건지ㅣ?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 매개변수로 들어오는 indexPath에 점연산자를 사용하여 section을 얻을 수 있음
         if indexPath.section == 0 {
             guard let infoCell = tableView.dequeueReusableCell(withIdentifier: "UserInfoTableViewCell", for: indexPath) as? UserInfoTableViewCell else {
                 return UITableViewCell()
@@ -86,17 +87,20 @@ extension MyDaangnViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 스택오버플로
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        // if it's the 3rd section, return a view with desired content for the section header
+        // 섹션 1번부터 적용하는 조건문
         if section > 0 {
+            // UIView를 하나 생성
             let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 10))
+            // 배경색 설정
             v.backgroundColor = .systemGray5
+            // 내부에 Label을 추가하는 코드
 //            let label = UILabel(frame: CGRect(x: 8.0, y: 4.0, width: v.bounds.size.width - 16.0, height: v.bounds.size.height - 8.0))
 //            label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 //            label.text = "Header for Third Section"
 //            v.addSubview(label)
             return v
         }
-        // not the 3rd section, so don't return a view
+        // nil을 반환하면 Header가 생기지 않음
         return nil
     }
 

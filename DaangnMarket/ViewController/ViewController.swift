@@ -40,12 +40,6 @@ class ViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-
-        
-        
-        
         // Delegate 지정
         tableView.delegate = self
         tableView.dataSource = self
