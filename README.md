@@ -1,6 +1,7 @@
 # 라이징캠프 3주차 과제
 #### 클론코딩 어플 : 당근마켓
 #### 기간: 2022/02/19 ~ 2022/02/26
+[실행영상](https://drive.google.com/file/d/1Y6hFK6S6B2doUtobfoBE9JjC67K9VsNh/view?usp=sharing)
 
 <br/>
 
